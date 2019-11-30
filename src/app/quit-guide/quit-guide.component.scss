@@ -1,9 +1,63 @@
+$radial-one: radial-gradient(#57A635, #2C521B);
+$radial-two: radial-gradient(#20A29E, #10514F);
+$radial-three: radial-gradient(#F05674, #782B3A);
+$radial-four: radial-gradient(#583985, #2C1D43);
+$radial-five: radial-gradient(#92CCF0, #496678);
+$radial-six: radial-gradient(#0078B3, #003C5A);
+
+$dark-blue: #003B71;
+
+.quit-card {
+    display: flex;
+    flex-direction: row;
+}
+
+.subtitle {
+    color: $dark-blue;
+    font-weight: 700;
+}
+
+div.step-one {
+    background-image: $radial-one;
+}
+
+div.step-two {
+    background-image: $radial-two;
+}
+
+div.step-three {
+    background-image: $radial-three;
+}
+
+div.step-four {
+    background-image: $radial-four;
+}
+
+div.step-five {
+    background-image: $radial-five;
+}
+
+div.step-six {
+    background-image: $radial-six;
+}
+
 div.step-circle {
-    background-image: radial-gradient(#57A635, #2C521B);
     border: solid 1px black;
     border-radius: 50%;
     color: white;
     text-align: center;
     width: 40px;
     height: 40px;
+    padding: 5px;
+    margin-right: 20px;
 }
+
+div.step-text {
+    text-align: center;
+    font-size: 12px;
+}
+
+div.step-number {
+    font-weight: 900;
+}
+

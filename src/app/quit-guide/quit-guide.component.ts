@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuitGuideComponent implements OnInit {
 
+  diamondColorTop: string = '#008ed4';
+  diamondColorBottom: string = '#005d8b';
+
   constructor() { }
 
   ngOnInit() {
