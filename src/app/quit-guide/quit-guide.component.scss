@@ -7,6 +7,15 @@ $radial-six: radial-gradient(#0078B3, #003C5A);
 
 $dark-blue: #003B71;
 
+.sidenav-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+}
+
 .quit-card {
     display: flex;
     flex-direction: row;

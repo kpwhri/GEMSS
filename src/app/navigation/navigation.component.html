@@ -1,0 +1,57 @@
+<mat-sidenav-container class='sidenav-container'>
+  <mat-sidenav #sidenav position='end' role='navigation'>
+    <mat-nav-list class='sidenav-list'>
+      <span mat-list-item>Menu</span>
+      <a mat-list-item>Home</a>
+      <a mat-list-item>Help</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <mat-toolbar class='toolbar'>
+      <mat-toolbar-row>
+        <span>
+          <a mat-icon-button>
+            <mat-icon>arrow_back_ios</mat-icon>
+          </a>
+        </span>
+        <span>
+          <a mat-button>
+            <img src='assets/diamond.svg' />
+          </a>
+        </span>
+        <span>GEMS
+        </span>
+        <span>
+          <a mat-icon-button (click)="sidenav.open()">
+            <mat-icon>more_vert</mat-icon>
+          </a>
+        </span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <app-quit-guide></app-quit-guide>
+    <router-outlet></router-outlet>
+
+    <footer>
+      <figure>
+        <img src='assets/home.svg' />
+        <figcaption>Home</figcaption>
+      </figure>
+      <figure>
+        <img src='assets/contract.svg' />
+        <figcaption>Journal</figcaption>
+      </figure>
+      <figure>
+        <img src='assets/small-toolbox.svg' />
+        <figcaption>Toolbox</figcaption>
+      </figure>
+      <figure>
+        <img src='assets/help-circle-outline.svg' />
+        <figcaption>More Help</figcaption>
+      </figure>
+    </footer>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
