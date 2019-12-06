@@ -1,3 +1,37 @@
+$blue-text: #0078B3;
+
+#sidenav-base {
+    border: 20px $blue-text;
+    border-radius: 15px 0 0 15px;
+    padding: 15px;
+    width: 66%;
+
+    a {
+        color: $blue-text;
+    }
+
+    .mat-icon {
+        padding-left: 25px;
+    }
+}
+
+#nav-list {
+    float: right;
+}
+
+#menu-header {
+    color: $blue-text;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#cancel-button {
+    color: $blue-text;
+}
+
 .toolbar {
     height: 60px;
     margin: -8px;

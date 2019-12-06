@@ -1,22 +1,41 @@
-<mat-sidenav-container class='sidenav-container'>
-  <mat-sidenav #sidenav position='end' role='navigation'>
-    <mat-nav-list class='sidenav-list'>
-      <span mat-list-item>Menu</span>
-      <a mat-list-item>Home</a>
-      <a mat-list-item>Help</a>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav id='sidenav-base' class='border' opened position='end' role='navigation'>
+    <div id='menu-header'>
+      <span>
+        <a mat-icon-button id='cancel-button'>
+          <mat-icon (click)="sidenav.close()">cancel</mat-icon>
+        </a>
+      </span>
+      <span>Menu</span>
+    </div>
+    <mat-nav-list id='nav-list'>
+      <a mat-list-item>
+        About
+        <mat-icon>info</mat-icon>
+      </a>
+      <a mat-list-item>
+        Contact
+        <mat-icon>mail_outline</mat-icon>
+      </a>
+      <a mat-list-item>
+        Tutorial
+        <mat-icon>class</mat-icon>
+      </a>
+      <a mat-list-item>
+        Settings
+        <mat-icon>settings_applications</mat-icon>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
 
     <mat-toolbar class='toolbar'>
-      <mat-toolbar-row>
+      <mat-toolbar-row style="justify-content: space-between;">
         <span>
           <a mat-icon-button>
             <mat-icon>arrow_back_ios</mat-icon>
           </a>
-        </span>
-        <span>
           <a mat-button>
             <img src='assets/diamond.svg' />
           </a>
