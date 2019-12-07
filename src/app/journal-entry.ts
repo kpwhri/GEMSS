@@ -1,7 +1,10 @@
 export class JournalEntry {
-  id: number;
-  title: string;
-  entry: string;
-  created: Date;
-  updated: Date;
+
+  constructor (
+    public id: number,
+    public title: string,
+    public entry: string,
+    public created: Date,
+    public updated: Date
+    ) {}
 }

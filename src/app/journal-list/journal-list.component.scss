@@ -1,8 +1,7 @@
-$light-green: #57A635;
-$dark-green: #2C531B;
+$button-color: #003B71;
 
 #newEntry {
-    background-image: radial-gradient($light-green, $dark-green);
+    background-color: $button-color;
     border-radius: 4px;
     color: white;
     display: block;
