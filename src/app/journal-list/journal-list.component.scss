@@ -1,0 +1,20 @@
+$light-green: #57A635;
+$dark-green: #2C531B;
+
+#newEntry {
+    background-image: radial-gradient($light-green, $dark-green);
+    border-radius: 4px;
+    color: white;
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 95%;
+}
+
+#blankSection {
+    padding-top: 50%;
+}

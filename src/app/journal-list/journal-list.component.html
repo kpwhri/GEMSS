@@ -1,0 +1,17 @@
+<p>Use your journal to make notes or track your progress as you cut
+back or quit smoking.</p>
+
+<a mat-raised-button id='newEntry' routerLink='.'>
+  &#43; ADD NEW ENTRY
+</a>
+
+<div *ngIf='entries.length > 0; then journalList else blankSection'></div>
+<ng-template #journalList>
+  <app-journal-image *ngFor='let entry of entries'
+    [journalDate]="entry.created" [journalTitle]="entry.title"
+    [journalEntry]="entry.entry" >
+  </app-journal-image>
+</ng-template>
+<ng-template #blankSection>
+  <div id='blankSection'></div>
+</ng-template>

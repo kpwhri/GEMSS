@@ -1,5 +1,5 @@
 <mat-sidenav-container>
-  <mat-sidenav #sidenav id='sidenav-base' class='border' opened position='end' role='navigation'>
+  <mat-sidenav #sidenav id='sidenav-base' class='border' position='end' role='navigation'>
     <div id='menu-header'>
       <span>
         <a mat-icon-button id='cancel-button'>
@@ -40,8 +40,7 @@
             <img src='assets/diamond.svg' />
           </a>
         </span>
-        <span>GEMS
-        </span>
+        <span>{{ pageTitle }}</span>
         <span>
           <a mat-icon-button (click)="sidenav.open()">
             <mat-icon>more_vert</mat-icon>
@@ -50,26 +49,29 @@
       </mat-toolbar-row>
     </mat-toolbar>
 
-    <app-quit-guide></app-quit-guide>
     <router-outlet></router-outlet>
 
     <footer>
-      <figure>
+      <a mat-button aria-label='Home button'
+        routerLink='/quit-guide' routerLinkActive='active'>
         <img src='assets/home.svg' />
-        <figcaption>Home</figcaption>
-      </figure>
-      <figure>
+        Home
+      </a>
+      <a mat-button aria-label='Journal button'
+        routerLink='/journal-list' routerLinkActive='active'>
         <img src='assets/contract.svg' />
-        <figcaption>Journal</figcaption>
-      </figure>
-      <figure>
+        Journal
+      </a>
+      <a mat-button aria-label='Toolbox button'
+        routerLink='' routerLinkActive='active'>
         <img src='assets/small-toolbox.svg' />
-        <figcaption>Toolbox</figcaption>
-      </figure>
-      <figure>
+        Toolbox
+      </a>
+      <a mat-button aria-label='More help button'
+        routerLink='' routerLinkActive='active'>
         <img src='assets/help-circle-outline.svg' />
-        <figcaption>More Help</figcaption>
-      </figure>
+        More Help
+      </a>
     </footer>
 
   </mat-sidenav-content>

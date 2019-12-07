@@ -45,9 +45,6 @@ export class GemTopViewComponent implements OnInit {
   @Input() colorBottom: string;
   @Input() gemId: string;
 
-  // diamondColorTop: string = '#008ed4';
-  // diamondColorBottom: string = '#005d8b';
-
   constructor() { }
 
   ngOnInit() {

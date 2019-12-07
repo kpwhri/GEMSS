@@ -33,13 +33,11 @@ $blue-text: #0078B3;
 }
 
 .toolbar {
-    height: 60px;
-    margin: -8px;
-    display: flex;
-    align-items: center;
     background-image: linear-gradient(#0086CF, #005D8F);
     color: white;
     font-weight: 600;
+    height: 60px;
+    margin: -8px;
 }
 
 .toolbar img {
@@ -48,12 +46,25 @@ $blue-text: #0078B3;
 }
 
 footer {
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    line-height: 20px;
     background-image: linear-gradient(#0086CF, #005D8F);
     color: white;
+    line-height: 20px;
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer {
+    a {
+      color: white;
+      text-align: center;
+      text-decoration: none;
+    };
+    img {
+      display: block;
+      margin: auto;
+      width: 50%;
+    }
 }
 
 footer figure {
