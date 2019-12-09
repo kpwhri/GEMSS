@@ -1,0 +1,35 @@
+$background-color: #CCE3F2;
+$text-color: #003B71;
+
+#mainform {
+    background-color: $background-color;
+    color: $text-color;
+    padding: 10px;
+}
+
+mat-form-field.mat-form-field {
+    margin: 10px 0;
+    background-color: white;
+}
+
+button#submit {
+    background-color: $text-color;
+    border-radius: 4px;
+    color: white;
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container > * {
+    width: 100%;
+}
