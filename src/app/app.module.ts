@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 import { MatCardModule } from '@angular/material/card';
@@ -13,6 +14,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatToolbarModule } from '@angular/material/toolbar';
+
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemDataService } from './in-mem-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,18 +30,19 @@ import { JournalImageComponent } from './journal-image/journal-image.component';
 @NgModule({
   declarations: [
     AppComponent,
-    QuitGuideComponent,
     GemTopViewComponent,
-    NavigationComponent,
     JournalListComponent,
     JournalNewComponent,
-    JournalImageComponent
+    JournalImageComponent,
+    NavigationComponent,
+    QuitGuideComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     MatCardModule,
     MatFormFieldModule,
     MatGridListModule,
@@ -46,7 +51,8 @@ import { JournalImageComponent } from './journal-image/journal-image.component';
     MatListModule,
     MatSidenavModule,
     MatToolbarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemDataService)
   ],
   providers: [],
   bootstrap: [AppComponent]
