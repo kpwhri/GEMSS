@@ -3,12 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { QuitGuideComponent } from './quit-guide/quit-guide.component';
 import { JournalListComponent } from './journal-list/journal-list.component';
-import { JournalNewComponent } from './journal-new/journal-new.component';
+import { JournalDetailComponent } from './journal-detail/journal-detail.component';
 
 const routes: Routes = [
   { path: 'quit-guide', component: QuitGuideComponent },
   { path: 'journal-list', component: JournalListComponent },
-  { path: 'journal-new', component: JournalNewComponent },
+  { path: 'journal-detail/:id', component: JournalDetailComponent },
   { path: '', redirectTo: '/quit-guide', pathMatch: 'full'}
 ]
 

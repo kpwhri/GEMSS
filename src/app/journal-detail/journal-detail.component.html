@@ -4,14 +4,14 @@
    class='container'>
     <mat-form-field appearance='fill' hideRequiredMarker>
       <mat-label>Enter a title &hellip;</mat-label>
-      <input matNativeControl type='text'
+      <input matNativeControl type='text' [(ngModel)]='entry.title'
        formControlName='title' required />
     </mat-form-field>
 
     <mat-form-field appearance='fill'>
       <mat-label>Enter your thoughts &hellip;</mat-label>
-      <textarea matNativeControl formControlName='entry'
-        placeholder="placeholder">
+      <textarea matNativeControl formControlName='content'
+        placeholder="placeholder" [(ngModel)]='entry.content'>
       </textarea>
     </mat-form-field>
 

@@ -5,26 +5,27 @@ import { Observable, throwError } from 'rxjs';
 import { tap, catchError, map } from 'rxjs/operators';
 
 import { JournalEntry } from './journal-entry';
+import { MessageService } from './message.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class JournalService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+              private messageService: MessageService) { }
 
   apiUrl = 'api/';
-  entries = [];
 
   getEntries(): Observable<JournalEntry[]> {
-    console.log("Journal Service");
+    this.messageService.add('JournalService: fetched entry');
     return this.http.get<JournalEntry[]>(this.apiUrl + 'journalEntries').pipe(
       catchError(this.handleError)
     );
   }
 
   getEntry(entryId): Observable<JournalEntry> {
-    return this.http.get<JournalEntry>(this.apiUrl + 'journal-detail/' + entryId).pipe(
+    return this.http.get<JournalEntry>(this.apiUrl + 'journalEntries/' + entryId).pipe(
       catchError(this.handleError)
     );
   }

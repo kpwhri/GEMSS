@@ -24,18 +24,20 @@ import { QuitGuideComponent } from './quit-guide/quit-guide.component';
 import { GemTopViewComponent } from './gem-top-view/gem-top-view.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { JournalListComponent } from './journal-list/journal-list.component';
-import { JournalNewComponent } from './journal-new/journal-new.component';
+import { JournalDetailComponent } from './journal-detail/journal-detail.component';
 import { JournalImageComponent } from './journal-image/journal-image.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GemTopViewComponent,
     JournalListComponent,
-    JournalNewComponent,
+    JournalDetailComponent,
     JournalImageComponent,
     NavigationComponent,
-    QuitGuideComponent
+    QuitGuideComponent,
+    MessagesComponent
   ],
   imports: [
     AppRoutingModule,
