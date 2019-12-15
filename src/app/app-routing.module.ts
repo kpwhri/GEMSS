@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'quit-guide', component: QuitGuideComponent },
   { path: 'journal-list', component: JournalListComponent },
   { path: 'journal-detail/:id', component: JournalDetailComponent },
+  { path: 'journal-detail', component: JournalDetailComponent },
   { path: '', redirectTo: '/quit-guide', pathMatch: 'full'}
 ]
 

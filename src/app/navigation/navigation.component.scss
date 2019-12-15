@@ -28,6 +28,10 @@ $blue-text: #0078B3;
     justify-content: space-between;
 }
 
+.clickable {
+    cursor: pointer;
+}
+
 #cancel-button {
     color: $blue-text;
 }

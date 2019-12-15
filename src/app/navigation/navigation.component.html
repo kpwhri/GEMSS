@@ -2,7 +2,7 @@
   <mat-sidenav #sidenav id='sidenav-base' class='border' position='end' role='navigation'>
     <div id='menu-header'>
       <span>
-        <a mat-icon-button id='cancel-button'>
+        <a mat-icon-button id='cancel-button' class='clickable'>
           <mat-icon (click)="sidenav.close()">cancel</mat-icon>
         </a>
       </span>
@@ -33,16 +33,16 @@
     <mat-toolbar class='toolbar'>
       <mat-toolbar-row style="justify-content: space-between;">
         <span>
-          <a mat-icon-button>
+          <a mat-icon-button (click)="goBack()" class='clickable'>
             <mat-icon>arrow_back_ios</mat-icon>
           </a>
-          <a mat-button>
+          <a mat-button routerLink=''>
             <img src='assets/diamond.svg' />
           </a>
         </span>
         <span>{{ pageTitle }}</span>
         <span>
-          <a mat-icon-button (click)="sidenav.open()">
+          <a mat-icon-button (click)="sidenav.open()" class='clickable'>
             <mat-icon>more_vert</mat-icon>
           </a>
         </span>

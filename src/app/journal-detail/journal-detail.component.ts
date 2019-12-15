@@ -16,20 +16,29 @@ export class JournalDetailComponent implements OnInit {
   constructor(private journalService: JournalService,
               private route: ActivatedRoute) { }
 
-  ngOnInit() {
-    this.getEntry();
-  }
-
-  getEntry(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.journalService.getEntry(id)
-      .subscribe(entry => this.entry = entry)
-  }
-
   journalDetailForm = new FormGroup({
     title: new FormControl(''),
     content: new FormControl(''),
   });
+
+  ngOnInit() {
+    const id = this.route.snapshot.paramMap.get('id');
+    if(id){
+      this.getEntry(id);
+    }
+  }
+
+  getEntry(id: string): void {
+    this.journalService.getEntry(id).subscribe(
+      entry => {
+        this.entry = entry;
+        this.journalDetailForm.setValue({
+          title: this.entry.title,
+          content: this.entry.content
+        })
+      }
+    )
+  }
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
