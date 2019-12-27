@@ -6,6 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
+import { environment } from '../environments/environment';
+
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -27,6 +29,12 @@ import { JournalListComponent } from './journal-list/journal-list.component';
 import { JournalDetailComponent } from './journal-detail/journal-detail.component';
 import { JournalImageComponent } from './journal-image/journal-image.component';
 import { MessagesComponent } from './messages/messages.component';
+import { SteponeComponent } from './steps/stepone.component';
+import { SteponeAComponent } from './steps/stepone-a.component';
+import { SteponeBComponent } from './steps/stepone-b.component';
+import { SteponeCComponent } from './steps/stepone-c.component';
+import { SteponeDComponent } from './steps/stepone-d.component';
+import { SteptwoComponent } from './steps/steptwo.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +45,13 @@ import { MessagesComponent } from './messages/messages.component';
     JournalImageComponent,
     NavigationComponent,
     QuitGuideComponent,
-    MessagesComponent
+    MessagesComponent,
+    SteponeComponent,
+    SteponeAComponent,
+    SteponeBComponent,
+    SteponeCComponent,
+    SteponeDComponent,
+    SteptwoComponent
   ],
   imports: [
     AppRoutingModule,
@@ -54,7 +68,8 @@ import { MessagesComponent } from './messages/messages.component';
     MatSidenavModule,
     MatToolbarModule,
     ReactiveFormsModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemDataService)
+    environment.production ?
+      [] : HttpClientInMemoryWebApiModule.forRoot(InMemDataService)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,30 @@
+$dark-blue: #003B71;
+$rave-green: #57A635;
+
+h2 {
+    color: $dark-blue;
+    padding-left: 15px;
+}
+
+#main-component {
+    padding: 10px;
+}
+
+.mat-card {
+    cursor: pointer;
+}
+
+.full-width-field {
+    width: 100%;
+}
+
+button {
+    background-color: $rave-green;
+    color: white;
+    cursor: pointer;
+    font-size: 120%;
+    font-weight: 600;
+    padding: 20px 0 20px 0;
+}
+
+// Maybe use Material Design here instead
