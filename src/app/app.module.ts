@@ -34,7 +34,20 @@ import { SteponeAComponent } from './steps/stepone-a.component';
 import { SteponeBComponent } from './steps/stepone-b.component';
 import { SteponeCComponent } from './steps/stepone-c.component';
 import { SteponeDComponent } from './steps/stepone-d.component';
+import { SteponeEComponent } from './steps/stepone-e.component';
+import { SteponeFComponent } from './steps/stepone-f.component';
+import { SteponeGComponent } from './steps/stepone-g.component';
+import { SteponeHComponent } from './steps/stepone-h.component';
+import { SteponeIComponent } from './steps/stepone-i.component';
+import { SteponeJComponent } from './steps/stepone-j.component';
+import { SteponeKComponent } from './steps/stepone-k.component';
+import { SteponeLComponent } from './steps/stepone-l.component';
 import { SteptwoComponent } from './steps/steptwo.component';
+import { SteptwoAComponent } from './steps/steptwo-a.component';
+import { SteptwoBComponent } from './steps/steptwo-b.component';
+import { SteptwoCComponent } from './steps/steptwo-c.component';
+import { StepthreeComponent } from './steps/stepthree.component';
+import { StepfourComponent } from './steps/stepfour.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +64,20 @@ import { SteptwoComponent } from './steps/steptwo.component';
     SteponeBComponent,
     SteponeCComponent,
     SteponeDComponent,
-    SteptwoComponent
+    SteponeEComponent,
+    SteponeFComponent,
+    SteponeGComponent,
+    SteponeHComponent,
+    SteponeIComponent,
+    SteponeJComponent,
+    SteponeKComponent,
+    SteponeLComponent,
+    SteptwoComponent,
+    SteptwoAComponent,
+    SteptwoBComponent,
+    SteptwoCComponent,
+    StepthreeComponent,
+    StepfourComponent
   ],
   imports: [
     AppRoutingModule,
