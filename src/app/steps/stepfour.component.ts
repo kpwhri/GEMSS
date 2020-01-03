@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { StepService } from './step.service';
+
 @Component({
   selector: 'app-stepfour',
   templateUrl: './stepfour.component.html',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StepfourComponent implements OnInit {
 
-  constructor() { }
+  constructor(private stepService: StepService) { }
 
   ngOnInit() {
+  }
+
+  onRead() {
+    this.stepService.onRead();
   }
 
 }

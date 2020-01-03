@@ -12,52 +12,237 @@
     </p>
 
     <h4>One Week Before Your Quit Date</h4>
-    <mat-card>
-        <mat-card-header>
-            <div mat-card-avatar class='step-complete-image'></div>
-            <mat-card-title>Plan your reward</mat-card-title>
-        </mat-card-header>
-    </mat-card>
-    <mat-card>
-        <mat-card-header>
-            <div mat-card-avatar class='step-complete-image'></div>
-            <mat-card-title>Stop buying cigarettes</mat-card-title>
-        </mat-card-header>
-    </mat-card>
-    <mat-card>
-        <mat-card-header>
-            <div mat-card-avatar class='step-complete-image'></div>
-            <mat-card-title>Tell someone</mat-card-title>
-        </mat-card-header>
-    </mat-card>
-    <mat-card>
-        <mat-card-header>
-            <div mat-card-avatar class='step-complete-image'></div>
-            <mat-card-title>Ask for the support you need</mat-card-title>
-        </mat-card-header>
-    </mat-card>
-    <mat-card>
-        <mat-card-header>
-            <div mat-card-avatar class='step-complete-image'></div>
-            <mat-card-title>Learn the basic skills for survival</mat-card-title>
-        </mat-card-header>
-    </mat-card>
+    <mat-expansion-panel class='card-expand'>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class='step-complete-image'>X</span>
+                Plan your reward
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+            <p>
+                Think about how much money you will save by not smoking.
+                How else could you use this money? Make a list of things
+                you could buy to reward yourself.
+            </p>
+            <p>You the GEMS *link to* calculator to see how much money
+                you will save over time.
+            </p>
+        </mat-panel-description>
+        <mat-action-row>
+            <button mat-flat-button class='full-width-field' (click)="onRead();">
+                Mark as read
+            </button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class='card-expand'>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class='step-complete-image'>X</span>
+                Stop buying cigarettes
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+            <p>
+                It's important not to have cigarettes hanging around
+                on or after your Quit Date, so plan your purchases
+                wisely! Buy them by the pack, not the carton.
+            </p>
+        </mat-panel-description>
+        <mat-action-row>
+            <button mat-flat-button class='full-width-field' (click)="onRead();">
+                Mark as read
+            </button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class='card-expand'>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class='step-complete-image'>X</span>
+                Tell someone
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+            <p>
+                Now that you've decided to stop smoking and you've
+                gotten your medication, it's time to tell someone.
+            </p>
+            <p>
+                We know, that sounds scary. You don't have to tell
+                everyone, but tell one person you trust. It's easier
+                to quit if you have support from a good friend or
+                family member.
+            </p>
+            <p>The support person is someone who:</p>
+            <ul>
+                <li>you trust</li>
+                <li>will support you, even when you're cranky and
+                    not your best, or</li>
+                <li>has made a hard change for themselves in the past</li>
+            </ul>
+            <p>
+                Don't choose someone who currently smokes. It will be
+                harder for them to support you when they are not ready
+                to quit smoking.
+            </p>
+        </mat-panel-description>
+        <mat-action-row>
+            <button mat-flat-button class='full-width-field' (click)="onRead();">
+                Mark as read
+            </button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class='card-expand'>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class='step-complete-image'>X</span>
+                Ask for the support you need
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+            <p>Ask your support person to do the following:</p>
+            <ul>
+                <li>Call, text or email daily to check in after
+                    your Quit Date, especially after the first
+                    couple weeks</li>
+                <li>Offer positive encouragement</li>
+                <li>Be patient if you're having a hard day or are
+                    more irritable than usual</li>
+                <li>Be a friend, not a nag</li>
+            </ul>
+        </mat-panel-description>
+        <mat-action-row>
+            <button mat-flat-button class='full-width-field' (click)="onRead();">
+                Mark as read
+            </button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class='card-expand'>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class='step-complete-image'>X</span>
+                Learn the basic skills for survival
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+            <p>
+                Many people think quitting smoking is a matter of
+                willpower: if you want it badly enough, you can will it
+                to happen. Wrong!
+            </p>
+            <p>
+                Quitting smoking is about <b>skill-power</b>, not
+                will-power!
+            </p>
+            <p>
+                Learning some basic skills will make quitting smoking
+                easier. Familiarize yourself with these skills now, so
+                you're ready for your quit date.
+            </p>
+            <ul>
+                <li>Link: Anticipating high-risk situations</li>
+                <li>Link: ACE strategies: Avoid, Cope &amp; Escape</li>
+                <li>Link: Managing negative emotions</li>
+                <li>Link: Coping with nicotine withdrawal</li>
+                <li>Link: Managing stress with box breathing</li>
+            </ul>
+        </mat-panel-description>
+        <mat-action-row>
+            <button mat-flat-button class='full-width-field' (click)="onRead();">
+                Mark as read
+            </button>
+        </mat-action-row>
+    </mat-expansion-panel>
 
     <h4>One Week Before Your Quit Date</h4>
-    <mat-card>
-        <mat-card-header>
-            <div mat-card-avatar class='step-complete-image'></div>
-            <mat-card-title>Clean house</mat-card-title>
-        </mat-card-header>
-    </mat-card>
+    <mat-expansion-panel class='card-expand'>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class='step-complete-image'>X</span>
+                Clean house
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+            <p>
+                Cleaning house is a good thing to do 1&ndash;2 days before
+                your Quit Date. Get rid of everything that reminds you
+                of smoking so you can start with a clean slate the
+                morning of your quit date.
+            </p>
+            <p>
+                Wash your sheets, clothes, curtains, carpets &mdash;
+                anything that smells like smoke.
+            </p>
+            <p>
+                Empty all of your ashtrays and start putting them away.
+            </p>
+            <p>
+                Open the windows in your home and car and let the
+                fresh air in.
+            </p>
+            <p>
+                Round up any remaining cigarettes and put them in one
+                place. Be sure to check drawers, pockets, briefcases
+                or backpacks &mdash; anywhere you may have stashed a
+                pack or some singles for safe keeping.
+            </p>
+        </mat-panel-description>
+        <mat-action-row>
+            <button mat-flat-button class='full-width-field' (click)="onRead();">
+                Mark as read
+            </button>
+        </mat-action-row>
+    </mat-expansion-panel>
 
     <h4>One Week Before Your Quit Date</h4>
-    <mat-card>
-        <mat-card-header>
-            <div mat-card-avatar class='step-complete-image'></div>
-            <mat-card-title>Final preparation</mat-card-title>
-        </mat-card-header>
-    </mat-card>
-
+    <mat-expansion-panel class='card-expand'>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class='step-complete-image'>X</span>
+                Final preparation
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+            <p>
+                Here's what you need to do the day before your Quit Date:
+            </p>
+            <ul>
+                <li>
+                    Review your checklist &mdash; have you forgotten
+                    anything?
+                </li>
+                <li>
+                    Make sure you have your stop-smoking medicine. Put it
+                    in the bathroom or on the kitchen table where you will
+                    see it <i>first thing</i> in the morning.
+                </li>
+                <li>
+                    Get rid of any cigarettes you still have. Throw them
+                    out! It's easy to slip or relapse if you have
+                    cigarettes hanging around, but it's very hard to slip
+                    if you don't.
+                </li>
+                <li>
+                    Plan something fun for your Quit Date that doesn't
+                    require a lot of mental energy &mdash; go to a movie,
+                    go shopping, take a walk with a friend. Choose an
+                    activity you enjoy, but one that won't make smoking easy.
+                </li>
+                <li>
+                    Go to bed early, so you can get a good night's sleep.
+                </li>
+            </ul>
+            <p>Now you are ready for step 5!</p>
+        </mat-panel-description>
+        <mat-action-row>
+            <button mat-flat-button class='full-width-field' (click)="onRead();">
+                Mark as read
+            </button>
+        </mat-action-row>
+    </mat-expansion-panel>
 
 </div>

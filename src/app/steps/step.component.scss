@@ -27,4 +27,11 @@ button {
     padding: 20px 0 20px 0;
 }
 
-// Maybe use Material Design here instead
+.card-expand {
+    border: 1px solid gray;
+    margin: 5px;
+
+    .mat-expansion-panel-header-title {
+        font-weight: bold;
+    }
+}
