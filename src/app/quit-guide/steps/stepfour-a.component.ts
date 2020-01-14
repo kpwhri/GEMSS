@@ -7,12 +7,12 @@ import {
   ViewChild
 } from "@angular/core";
 
-import { StepService } from "./step.service";
+import { StepService } from "../step.service";
 
 @Component({
   selector: "app-stepfour-a",
   templateUrl: "./stepfour-a.component.html",
-  styleUrls: ["./step.component.scss"],
+  styleUrls: ["../step.component.scss"],
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class StepfourAComponent implements OnInit {
