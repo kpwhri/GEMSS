@@ -1,0 +1,77 @@
+<h3>Coping with common nicotine withdrawal symptoms</h3>
+<p>
+  Nicotine withdrawal can make you feel pretty bad when you first stop smoking,
+  but this will get better after a few weeks. In the meantime, try these tips.
+</p>
+<p>Small: Tap each symptom to reveal tips</p>
+
+<mat-grid-list cols="3" rowHeight="80px">
+  <mat-grid-tile (click)="openDialog(0)">
+    <p>Cigs pic</p>
+    <mat-grid-tile-footer>
+      Cravings/Urges
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+
+  <mat-grid-tile (click)="openDialog(1)">
+    <p>Swear pic</p>
+    <mat-grid-tile-footer>
+      Irritability
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+
+  <mat-grid-tile (click)="openDialog(2)">
+    <p>Plate pic</p>
+    <mat-grid-tile-footer>
+      Hunger
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+
+  <mat-grid-tile (click)="openDialog(3)">
+    <p>Think pic</p>
+    <mat-grid-tile-footer>
+      Poor Concentration
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+
+  <mat-grid-tile (click)="openDialog(4)">
+    <p>Storm pic</p>
+    <mat-grid-tile-footer>
+      Sadness
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+
+  <mat-grid-tile (click)="openDialog(5)">
+    <p>Sleepy pic</p>
+    <mat-grid-tile-footer>
+      Fatigue
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+
+  <mat-grid-tile (click)="openDialog(6)">
+    <p>Poop pic</p>
+    <mat-grid-tile-footer>
+      Constipation
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+
+  <mat-grid-tile (click)="openDialog(7)">
+    <p>Headache pic</p>
+    <mat-grid-tile-footer>
+      Headache
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+
+  <mat-grid-tile (click)="openDialog(8)">
+    <p>Bed pic</p>
+    <mat-grid-tile-footer>
+      Insomnia
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<div>
+  <button mat-flat-button class="full-width-field" (click)="onRead()">
+    Mark as read
+  </button>
+</div>

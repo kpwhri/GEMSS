@@ -14,7 +14,6 @@ const routes: Routes = [
     loadChildren: () =>
       import("./quit-guide/quit-guide.module").then(mod => mod.QuitGuideModule)
   }
-  // { path: "", redirectTo: "/quit-guide", pathMatch: "full" }
 ];
 
 @NgModule({

@@ -21,6 +21,12 @@ import { SteptwoBComponent } from "./steptwo-b.component";
 import { SteptwoCComponent } from "./steptwo-c.component";
 import { StepthreeComponent } from "./stepthree.component";
 import { StepfourComponent } from "./stepfour.component";
+import { StepfourAComponent } from "./stepfour-a.component";
+import { StepfourBComponent } from "./stepfour-b.component";
+import { StepfourCComponent } from "./stepfour-c.component";
+import { StepfourDComponent } from "./stepfour-d.component";
+import { StepfourEComponent } from "./stepfour-e.component";
+import { StepfourDBreathingComponent } from "./stepfour-dialogs/stepfour-d-breathing.component";
 
 const quitGuideRoutes: Routes = [
   { path: "quit-guide/step/1/a", component: SteponeAComponent },
@@ -41,7 +47,20 @@ const quitGuideRoutes: Routes = [
   { path: "quit-guide/step/2/c", component: SteptwoCComponent },
   { path: "quit-guide/step/2", component: SteptwoComponent, pathMatch: "full" },
   { path: "quit-guide/step/3", component: StepthreeComponent },
-  { path: "quit-guide/step/4", component: StepfourComponent },
+  { path: "quit-guide/step/4/a", component: StepfourAComponent },
+  { path: "quit-guide/step/4/b", component: StepfourBComponent },
+  { path: "quit-guide/step/4/c", component: StepfourCComponent },
+  { path: "quit-guide/step/4/d", component: StepfourDComponent },
+  { path: "quit-guide/step/4/e", component: StepfourEComponent },
+  {
+    path: "quit-guide/step/4/breathing",
+    component: StepfourDBreathingComponent
+  },
+  {
+    path: "quit-guide/step/4",
+    component: StepfourComponent,
+    pathMatch: "full"
+  },
   { path: "", component: QuitGuideComponent, pathMatch: "full" }
 ];
 

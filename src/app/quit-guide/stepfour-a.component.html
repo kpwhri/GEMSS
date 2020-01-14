@@ -1,0 +1,149 @@
+<h3>Anticipating high-risk situations</h3>
+<img src="assets/steps/mouse-trap.png" />
+<p>
+  High-risk situations are those which make you want to smoke. They can be
+  certain times of day, activities, locations and even moods.
+</p>
+<p>
+  Knowing your high-risk situations can help you avoid them or have a plan to
+  deal with them when you first quit smoking. This is where your
+  &ldquo;skill-power&rdquo; will come in handy.
+</p>
+<p>
+  Here are some common high-risk situations and strategies for dealing with
+  each:
+</p>
+
+<p>Tap each high-risk sitation to reveal strategy</p>
+
+<mat-grid-list cols="2" rowHeight="120px">
+  <mat-grid-tile>
+    <div class="flip-container" #panel0>
+      <div class="flipper">
+        <div class="front" (click)="flipContainer(0)">
+          <p>First thing in the morning</p>
+          <img src="assets/steps/stress-icon.svg" />
+        </div>
+        <div class="back" (click)="flipContainer(0)">
+          Brush your teeth when you get out of bed. A minty-fresh mouth will
+          kill the desire to smoke.
+        </div>
+      </div>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <div class="flip-container" #panel1>
+      <div class="flipper">
+        <div class="front" (click)="flipContainer(1)">
+          <p>Drinking coffee</p>
+          <p>Cuppa picture</p>
+        </div>
+        <div class="back" (click)="flipContainer(1)">
+          Switch to tea (or, if you normally drink tea, switch to coffee).
+        </div>
+      </div>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <div class="flip-container" #panel2>
+      <div class="flipper">
+        <div class="front" (click)="flipContainer(2)">
+          <p>Drinking alcohol</p>
+          <p>Mug picture</p>
+        </div>
+        <div class="back" (click)="flipContainer(2)">
+          Drink a non-alcoholic beverage.
+        </div>
+      </div>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <div class="flip-container" #panel3>
+      <div class="flipper">
+        <div class="front" (click)="flipContainer(3)">
+          <p>After meals</p>
+          <p>Food picture</p>
+        </div>
+        <div class="back" (click)="flipContainer(3)">
+          Brush your teeth and go for a walk.
+        </div>
+      </div>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <div class="flip-container" #panel4>
+      <div class="flipper">
+        <div class="front" (click)="flipContainer(4)">
+          <p>When stressed</p>
+          <img src="assets/steps/stress-icon.svg" />
+        </div>
+        <div class="back" (click)="flipContainer(4)">
+          Try deep breathing.
+        </div>
+      </div>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <div class="flip-container" #panel5>
+      <div class="flipper">
+        <div class="front" (click)="flipContainer(5)">
+          <p>Watching TV</p>
+          <p>TV picture</p>
+        </div>
+        <div class="back" (click)="flipContainer(5)">
+          <p>Watch TV in a room where you don't typically smoke.</p>
+        </div>
+      </div>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <div class="flip-container" #panel6>
+      <div class="flipper">
+        <div class="front" (click)="flipContainer(6)">
+          <p>When driving to work</p>
+          <p>Car picture</p>
+        </div>
+        <div class="back" (click)="flipContainer(6)">
+          <p>
+            Take a new route to work. Focusing on a new route can distract you
+            from wanting a cigarette.
+          </p>
+        </div>
+      </div>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <div class="flip-container" #panel7>
+      <div class="flipper">
+        <div class="front" (click)="flipContainer(7)">
+          <p>Mid-morning or mid-afternoon work breaks</p>
+          <p>Chair picture</p>
+        </div>
+        <div class="back" (click)="flipContainer(7)">
+          <p>
+            Hang out with non-smoking friends. Drink some orange juice &ndash;
+            it will give you a shot of energy &amp; it will kill the desire for
+            a cigarette.
+          </p>
+        </div>
+      </div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<p>
+  Make a note in your GEMS Journal about your personal high-risk situations and
+  what you could do to not smoke during each of these situations.
+</p>
+<div>
+  <button mat-flat-button class="full-width-field" (click)="onRead()">
+    Mark as read
+  </button>
+</div>
