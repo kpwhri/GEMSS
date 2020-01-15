@@ -37,7 +37,7 @@
     </mat-action-row>
   </mat-expansion-panel>
 
-  <mat-expansion-panel class="card-expand">
+  <mat-expansion-panel class="card-expand" #panel1>
     <mat-expansion-panel-header>
       <mat-panel-title>
         <span class="step-complete-image">X</span>
@@ -52,13 +52,13 @@
       </p>
     </mat-panel-description>
     <mat-action-row>
-      <button mat-flat-button class="full-width-field" (click)="onRead()">
+      <button mat-flat-button class="full-width-field" (click)="onRead(1)">
         Mark as read
       </button>
     </mat-action-row>
   </mat-expansion-panel>
 
-  <mat-expansion-panel class="card-expand">
+  <mat-expansion-panel class="card-expand" #panel2>
     <mat-expansion-panel-header>
       <mat-panel-title>
         <span class="step-complete-image">X</span>
@@ -87,13 +87,13 @@
       </p>
     </mat-panel-description>
     <mat-action-row>
-      <button mat-flat-button class="full-width-field" (click)="onRead()">
+      <button mat-flat-button class="full-width-field" (click)="onRead(2)">
         Mark as read
       </button>
     </mat-action-row>
   </mat-expansion-panel>
 
-  <mat-expansion-panel class="card-expand">
+  <mat-expansion-panel class="card-expand" #panel3>
     <mat-expansion-panel-header>
       <mat-panel-title>
         <span class="step-complete-image">X</span>
@@ -116,13 +116,13 @@
       </ul>
     </mat-panel-description>
     <mat-action-row>
-      <button mat-flat-button class="full-width-field" (click)="onRead()">
+      <button mat-flat-button class="full-width-field" (click)="onRead(3)">
         Mark as read
       </button>
     </mat-action-row>
   </mat-expansion-panel>
 
-  <mat-expansion-panel class="card-expand">
+  <mat-expansion-panel class="card-expand" #panel4>
     <mat-expansion-panel-header>
       <mat-panel-title>
         <span class="step-complete-image">X</span>
@@ -149,14 +149,14 @@
       </ul>
     </mat-panel-description>
     <mat-action-row>
-      <button mat-flat-button class="full-width-field" (click)="onRead()">
+      <button mat-flat-button class="full-width-field" (click)="onRead(4)">
         Mark as read
       </button>
     </mat-action-row>
   </mat-expansion-panel>
 
   <h4>One Week Before Your Quit Date</h4>
-  <mat-expansion-panel class="card-expand">
+  <mat-expansion-panel class="card-expand" #panel5>
     <mat-expansion-panel-header>
       <mat-panel-title>
         <span class="step-complete-image">X</span>
@@ -186,14 +186,14 @@
       </p>
     </mat-panel-description>
     <mat-action-row>
-      <button mat-flat-button class="full-width-field" (click)="onRead()">
+      <button mat-flat-button class="full-width-field" (click)="onRead(5)">
         Mark as read
       </button>
     </mat-action-row>
   </mat-expansion-panel>
 
   <h4>One Week Before Your Quit Date</h4>
-  <mat-expansion-panel class="card-expand">
+  <mat-expansion-panel class="card-expand" #panel6>
     <mat-expansion-panel-header>
       <mat-panel-title>
         <span class="step-complete-image">X</span>
@@ -231,7 +231,7 @@
       <p>Now you are ready for step 5!</p>
     </mat-panel-description>
     <mat-action-row>
-      <button mat-flat-button class="full-width-field" (click)="onRead()">
+      <button mat-flat-button class="full-width-field" (click)="onRead(6)">
         Mark as read
       </button>
     </mat-action-row>

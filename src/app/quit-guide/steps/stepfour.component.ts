@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
+import { Router } from "@angular/router";
 
 import { StepService } from "../step.service";
 
@@ -15,9 +16,8 @@ export class StepfourComponent implements OnInit {
   @ViewChild("panel4", { static: false }) panel4: ElementRef;
   @ViewChild("panel5", { static: false }) panel5: ElementRef;
   @ViewChild("panel6", { static: false }) panel6: ElementRef;
-  @ViewChild("panel7", { static: false }) panel7: ElementRef;
 
-  constructor(private stepService: StepService) {}
+  constructor(private stepService: StepService, private router: Router) {}
 
   ngOnInit() {}
 
@@ -29,14 +29,12 @@ export class StepfourComponent implements OnInit {
       this.panel3,
       this.panel4,
       this.panel5,
-      this.panel6,
-      this.panel7
+      this.panel6
     ];
-    const panel = panelArray[panelNum].nativeElement;
-    console.log(panelArray[panelNum]);
-    console.log(panelArray[panelNum].nativeElement);
-    // panel.close();
-
     this.stepService.onRead();
+    if (panelNum == 6) {
+      this.router.navigate(["/", "quit-guide", "step", "5"]);
+    }
+    panelArray[panelNum].expanded = false;
   }
 }
