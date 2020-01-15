@@ -1,19 +1,11 @@
-import {
-  Component,
-  OnInit,
-  ElementRef,
-  Renderer2,
-  ViewEncapsulation,
-  ViewChild
-} from "@angular/core";
+import { Component, OnInit, ElementRef, ViewChild } from "@angular/core";
 
 import { StepService } from "../step.service";
 
 @Component({
   selector: "app-stepfour-a",
   templateUrl: "./stepfour-a.component.html",
-  styleUrls: ["../step.component.scss"],
-  encapsulation: ViewEncapsulation.ShadowDom
+  styleUrls: ["../step.component.scss"]
 })
 export class StepfourAComponent implements OnInit {
   @ViewChild("panel0", { static: false }) panel0: ElementRef;
@@ -24,13 +16,8 @@ export class StepfourAComponent implements OnInit {
   @ViewChild("panel5", { static: false }) panel5: ElementRef;
   @ViewChild("panel6", { static: false }) panel6: ElementRef;
   @ViewChild("panel7", { static: false }) panel7: ElementRef;
-  showFront = true;
 
-  constructor(
-    private stepService: StepService,
-    private render: Renderer2,
-    private el: ElementRef
-  ) {}
+  constructor(private stepService: StepService, private el: ElementRef) {}
 
   ngOnInit() {}
 

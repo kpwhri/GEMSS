@@ -41,6 +41,8 @@ import { StepfourDDialog8Component } from "./stepfour-dialogs/stepfour-d-dialog8
 import { StepfourDDialog9Component } from "./stepfour-dialogs/stepfour-d-dialog9.component";
 import { StepfourDBreathingComponent } from "./stepfour-dialogs/stepfour-d-breathing.component";
 import { StepfourEComponent } from "./steps/stepfour-e.component";
+import { StepfiveComponent } from "./steps/stepfive.component";
+import { StepsixComponent } from "./steps/stepsix.component";
 import { QuitGuideRoutingModule } from "./quit-guide-routing.module";
 
 @NgModule({
@@ -88,7 +90,9 @@ import { QuitGuideRoutingModule } from "./quit-guide-routing.module";
     StepfourDDialog8Component,
     StepfourDDialog9Component,
     StepfourDBreathingComponent,
-    StepfourEComponent
+    StepfourEComponent,
+    StepfiveComponent,
+    StepsixComponent
   ],
   exports: [
     MatCardModule,
@@ -117,7 +121,9 @@ import { QuitGuideRoutingModule } from "./quit-guide-routing.module";
     StepfourBComponent,
     StepfourCComponent,
     StepfourDComponent,
-    StepfourEComponent
+    StepfourEComponent,
+    StepfiveComponent,
+    StepsixComponent
     // StepfourDBreathingComponent,
   ],
   entryComponents: [
