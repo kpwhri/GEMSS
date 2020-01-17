@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { JournalEntry } from '../journal-entry';
-// import { ENTRIES } from '../journal-entry-mock';
 import { JournalService } from '../journal.service';
 
 @Component({
@@ -22,5 +21,4 @@ export class JournalListComponent implements OnInit {
         this.entries = entries;
       })
   }
-
 }

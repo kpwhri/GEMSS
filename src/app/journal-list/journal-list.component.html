@@ -1,17 +1,22 @@
-<p>Use your journal to make notes or track your progress as you cut
-back or quit smoking.</p>
+<p>
+  Use your journal to make notes or track your progress as you cut back or quit
+  smoking.
+</p>
 
-<a mat-raised-button id='newEntry' routerLink='/journal-new'>
+<a mat-raised-button id="newEntry" routerLink="/journal-new">
   ADD NEW ENTRY
 </a>
 
-<div *ngIf='entries.length > 0; then journalList else blankSection'></div>
+<div *ngIf="entries.length > 0; then journalList; else blankSection"></div>
 <ng-template #journalList>
-  <app-journal-image *ngFor='let entry of entries'
-    [journalDate]="entry.created" [journalTitle]="entry.title"
-    [journalEntry]="entry.entry" >
+  <app-journal-image
+    *ngFor="let entry of entries"
+    [journalDate]="entry.created"
+    [journalTitle]="entry.title"
+    [journalEntry]="entry.content"
+  >
   </app-journal-image>
 </ng-template>
 <ng-template #blankSection>
-  <div id='blankSection'></div>
+  <div id="blankSection"></div>
 </ng-template>

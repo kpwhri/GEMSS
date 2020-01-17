@@ -1,19 +1,28 @@
-import { ActivatedRoute } from '@angular/router';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { ActivatedRoute } from "@angular/router";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
 
-import { JournalDetailComponent } from './journal-detail.component';
+import { JournalDetailComponent } from "./journal-detail.component";
 
-describe('JournalDetailComponent', () => {
+describe("JournalDetailComponent", () => {
   let component: JournalDetailComponent;
   let fixture: ComponentFixture<JournalDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ JournalDetailComponent ],
-      imports: [ HttpClientTestingModule, MatFormFieldModule, FormsModule, ReactiveFormsModule ],
+      declarations: [JournalDetailComponent],
+      imports: [
+        BrowserAnimationsModule,
+        HttpClientTestingModule,
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule,
+        ReactiveFormsModule
+      ],
       providers: [
         {
           provide: ActivatedRoute,
@@ -28,8 +37,7 @@ describe('JournalDetailComponent', () => {
           }
         }
       ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -38,7 +46,7 @@ describe('JournalDetailComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
