@@ -1,11 +1,11 @@
+@import "../app.component.scss";
+
 $radial-one: radial-gradient(#57a635, #2c521b);
 $radial-two: radial-gradient(#20a29e, #10514f);
 $radial-three: radial-gradient(#f05674, #782b3a);
 $radial-four: radial-gradient(#583985, #2c1d43);
 $radial-five: radial-gradient(#92ccf0, #496678);
 $radial-six: radial-gradient(#0078b3, #003c5a);
-
-$dark-blue: #003b71;
 
 .sidenav-container {
   position: absolute;
@@ -17,6 +17,7 @@ $dark-blue: #003b71;
 }
 
 .quit-card {
+  cursor: pointer;
   display: flex;
   flex-direction: row;
 }

@@ -1,19 +1,19 @@
-$button-color: #003B71;
+@import "../../app.component.scss";
 
 #newEntry {
-    background-color: $button-color;
-    border-radius: 4px;
-    color: white;
-    display: block;
-    font-size: 20px;
-    font-weight: 800;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    width: 95%;
+  background-color: $dark-blue;
+  border-radius: 4px;
+  color: white;
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 95%;
 }
 
 #blankSection {
-    padding-top: 50%;
+  padding-top: 50%;
 }

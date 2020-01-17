@@ -1,8 +1,4 @@
-$dark-blue: #003b71;
-$light-blue: #cce3f2;
-$rave-green: #57a635;
-$dark-green: #abbe8c;
-$light-green: #ddf2bb;
+@import "../app.component.scss";
 
 h2 {
   color: $dark-blue;

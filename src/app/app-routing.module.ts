@@ -12,6 +12,10 @@ const routes: Routes = [
     path: "quit-guide",
     loadChildren: () =>
       import("./quit-guide/quit-guide.module").then(mod => mod.QuitGuideModule)
+  },
+  { path: 'shared',
+    loadChildren: () =>
+      import('./shared/shared.module').then(m => m.SharedModule)
   }
 ];
 

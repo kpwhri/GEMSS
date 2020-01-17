@@ -25,7 +25,8 @@ import { MessagesComponent } from "./messages/messages.component";
 import { JournalModule } from "./journal/journal.module";
 import { NavigationComponent } from "./navigation/navigation.component";
 import { QuitGuideModule } from "./quit-guide/quit-guide.module";
-import { MatExpansionModule } from "@angular/material/expansion";
+import { SharedModule } from "./shared/shared.module";
+// import { MatExpansionModule } from "@angular/material/expansion";
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { MatExpansionModule } from "@angular/material/expansion";
     MatToolbarModule,
     QuitGuideModule,
     ReactiveFormsModule,
+    SharedModule,
     environment.production
       ? []
       : HttpClientInMemoryWebApiModule.forRoot(InMemDataService)

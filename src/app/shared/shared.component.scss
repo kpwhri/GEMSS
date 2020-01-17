@@ -1,0 +1,14 @@
+@import "../app.component.scss";
+
+button {
+  background-color: $dark-blue;
+  color: white;
+  cursor: pointer;
+  font-size: 120%;
+  font-weight: 600;
+  padding: 20px 0 20px 0;
+}
+
+.full-width-field {
+  width: 100%;
+}
