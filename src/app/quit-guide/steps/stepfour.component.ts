@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { Router } from "@angular/router";
 
 import { StepService } from "../step.service";
+import { MatExpansionPanel } from "@angular/material/expansion";
 
 @Component({
   selector: "app-stepfour",
@@ -9,13 +10,13 @@ import { StepService } from "../step.service";
   styleUrls: ["../step.component.scss"]
 })
 export class StepfourComponent implements OnInit {
-  @ViewChild("panel0", { static: false }) panel0: ElementRef;
-  @ViewChild("panel1", { static: false }) panel1: ElementRef;
-  @ViewChild("panel2", { static: false }) panel2: ElementRef;
-  @ViewChild("panel3", { static: false }) panel3: ElementRef;
-  @ViewChild("panel4", { static: false }) panel4: ElementRef;
-  @ViewChild("panel5", { static: false }) panel5: ElementRef;
-  @ViewChild("panel6", { static: false }) panel6: ElementRef;
+  @ViewChild("panel0", { static: false }) panel0: ElementRef<MatExpansionPanel>;
+  @ViewChild("panel1", { static: false }) panel1: ElementRef<MatExpansionPanel>;
+  @ViewChild("panel2", { static: false }) panel2: ElementRef<MatExpansionPanel>;
+  @ViewChild("panel3", { static: false }) panel3: ElementRef<MatExpansionPanel>;
+  @ViewChild("panel4", { static: false }) panel4: ElementRef<MatExpansionPanel>;
+  @ViewChild("panel5", { static: false }) panel5: ElementRef<MatExpansionPanel>;
+  @ViewChild("panel6", { static: false }) panel6: ElementRef<MatExpansionPanel>;
 
   constructor(private stepService: StepService, private router: Router) {}
 
@@ -32,9 +33,9 @@ export class StepfourComponent implements OnInit {
       this.panel6
     ];
     this.stepService.onRead();
-    if (panelNum == 6) {
+    if (panelNum === 6) {
       this.router.navigate(["/", "quit-guide", "step", "5"]);
     }
-    panelArray[panelNum].expanded = false;
+    panelArray[panelNum].nativeElement.expanded = false;
   }
 }

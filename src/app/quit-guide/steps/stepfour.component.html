@@ -12,148 +12,152 @@
   </p>
 
   <h4>One Week Before Your Quit Date</h4>
-  <mat-expansion-panel class="card-expand" #panel0>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        <span class="step-complete-image">X</span>
-        Plan your reward
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <mat-panel-description>
-      <p>
-        Think about how much money you will save by not smoking. How else could
-        you use this money? Make a list of things you could buy to reward
-        yourself.
-      </p>
-      <p>
-        You the GEMS *link to* calculator to see how much money you will save
-        over time.
-      </p>
-    </mat-panel-description>
-    <mat-action-row>
-      <button mat-flat-button class="full-width-field" (click)="onRead(0)">
-        Mark as read
-      </button>
-    </mat-action-row>
-  </mat-expansion-panel>
+  <mat-accordion multi="false">
+    <mat-expansion-panel class="card-expand" #panel0>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span class="step-complete-image">X</span>
+          Plan your reward
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        <p>
+          Think about how much money you will save by not smoking. How else
+          could you use this money? Make a list of things you could buy to
+          reward yourself.
+        </p>
+        <p>
+          You the GEMS *link to* calculator to see how much money you will save
+          over time.
+        </p>
+      </mat-panel-description>
+      <mat-action-row>
+        <button mat-flat-button class="full-width-field" (click)="onRead(0)">
+          Mark as read
+        </button>
+      </mat-action-row>
+    </mat-expansion-panel>
 
-  <mat-expansion-panel class="card-expand" #panel1>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        <span class="step-complete-image">X</span>
-        Stop buying cigarettes
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <mat-panel-description>
-      <p>
-        It's important not to have cigarettes hanging around on or after your
-        Quit Date, so plan your purchases wisely! Buy them by the pack, not the
-        carton.
-      </p>
-    </mat-panel-description>
-    <mat-action-row>
-      <button mat-flat-button class="full-width-field" (click)="onRead(1)">
-        Mark as read
-      </button>
-    </mat-action-row>
-  </mat-expansion-panel>
+    <mat-expansion-panel class="card-expand" #panel1>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span class="step-complete-image">X</span>
+          Stop buying cigarettes
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        <p>
+          It's important not to have cigarettes hanging around on or after your
+          Quit Date, so plan your purchases wisely! Buy them by the pack, not
+          the carton.
+        </p>
+      </mat-panel-description>
+      <mat-action-row>
+        <button mat-flat-button class="full-width-field" (click)="onRead(1)">
+          Mark as read
+        </button>
+      </mat-action-row>
+    </mat-expansion-panel>
 
-  <mat-expansion-panel class="card-expand" #panel2>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        <span class="step-complete-image">X</span>
-        Tell someone
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <mat-panel-description>
-      <p>
-        Now that you've decided to stop smoking and you've gotten your
-        medication, it's time to tell someone.
-      </p>
-      <p>
-        We know, that sounds scary. You don't have to tell everyone, but tell
-        one person you trust. It's easier to quit if you have support from a
-        good friend or family member.
-      </p>
-      <p>The support person is someone who:</p>
-      <ul>
-        <li>you trust</li>
-        <li>will support you, even when you're cranky and not your best, or</li>
-        <li>has made a hard change for themselves in the past</li>
-      </ul>
-      <p>
-        Don't choose someone who currently smokes. It will be harder for them to
-        support you when they are not ready to quit smoking.
-      </p>
-    </mat-panel-description>
-    <mat-action-row>
-      <button mat-flat-button class="full-width-field" (click)="onRead(2)">
-        Mark as read
-      </button>
-    </mat-action-row>
-  </mat-expansion-panel>
+    <mat-expansion-panel class="card-expand" #panel2>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span class="step-complete-image">X</span>
+          Tell someone
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        <p>
+          Now that you've decided to stop smoking and you've gotten your
+          medication, it's time to tell someone.
+        </p>
+        <p>
+          We know, that sounds scary. You don't have to tell everyone, but tell
+          one person you trust. It's easier to quit if you have support from a
+          good friend or family member.
+        </p>
+        <p>The support person is someone who:</p>
+        <ul>
+          <li>you trust</li>
+          <li>
+            will support you, even when you're cranky and not your best, or
+          </li>
+          <li>has made a hard change for themselves in the past</li>
+        </ul>
+        <p>
+          Don't choose someone who currently smokes. It will be harder for them
+          to support you when they are not ready to quit smoking.
+        </p>
+      </mat-panel-description>
+      <mat-action-row>
+        <button mat-flat-button class="full-width-field" (click)="onRead(2)">
+          Mark as read
+        </button>
+      </mat-action-row>
+    </mat-expansion-panel>
 
-  <mat-expansion-panel class="card-expand" #panel3>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        <span class="step-complete-image">X</span>
-        Ask for the support you need
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <mat-panel-description>
-      <p>Ask your support person to do the following:</p>
-      <ul>
-        <li>
-          Call, text or email daily to check in after your Quit Date, especially
-          after the first couple weeks
-        </li>
-        <li>Offer positive encouragement</li>
-        <li>
-          Be patient if you're having a hard day or are more irritable than
-          usual
-        </li>
-        <li>Be a friend, not a nag</li>
-      </ul>
-    </mat-panel-description>
-    <mat-action-row>
-      <button mat-flat-button class="full-width-field" (click)="onRead(3)">
-        Mark as read
-      </button>
-    </mat-action-row>
-  </mat-expansion-panel>
+    <mat-expansion-panel class="card-expand" #panel3>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span class="step-complete-image">X</span>
+          Ask for the support you need
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        <p>Ask your support person to do the following:</p>
+        <ul>
+          <li>
+            Call, text or email daily to check in after your Quit Date,
+            especially after the first couple weeks
+          </li>
+          <li>Offer positive encouragement</li>
+          <li>
+            Be patient if you're having a hard day or are more irritable than
+            usual
+          </li>
+          <li>Be a friend, not a nag</li>
+        </ul>
+      </mat-panel-description>
+      <mat-action-row>
+        <button mat-flat-button class="full-width-field" (click)="onRead(3)">
+          Mark as read
+        </button>
+      </mat-action-row>
+    </mat-expansion-panel>
 
-  <mat-expansion-panel class="card-expand" #panel4>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        <span class="step-complete-image">X</span>
-        Learn the basic skills for survival
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <mat-panel-description>
-      <p>
-        Many people think quitting smoking is a matter of willpower: if you want
-        it badly enough, you can will it to happen. Wrong!
-      </p>
-      <p>Quitting smoking is about <b>skill-power</b>, not will-power!</p>
-      <p>
-        Learning some basic skills will make quitting smoking easier.
-        Familiarize yourself with these skills now, so you're ready for your
-        quit date.
-      </p>
-      <ul>
-        <li>Link: Anticipating high-risk situations</li>
-        <li>Link: ACE strategies: Avoid, Cope &amp; Escape</li>
-        <li>Link: Managing negative emotions</li>
-        <li>Link: Coping with nicotine withdrawal</li>
-        <li>Link: Managing stress with box breathing</li>
-      </ul>
-    </mat-panel-description>
-    <mat-action-row>
-      <button mat-flat-button class="full-width-field" (click)="onRead(4)">
-        Mark as read
-      </button>
-    </mat-action-row>
-  </mat-expansion-panel>
+    <mat-expansion-panel class="card-expand" #panel4>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span class="step-complete-image">X</span>
+          Learn the basic skills for survival
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        <p>
+          Many people think quitting smoking is a matter of willpower: if you
+          want it badly enough, you can will it to happen. Wrong!
+        </p>
+        <p>Quitting smoking is about <b>skill-power</b>, not will-power!</p>
+        <p>
+          Learning some basic skills will make quitting smoking easier.
+          Familiarize yourself with these skills now, so you're ready for your
+          quit date.
+        </p>
+        <ul>
+          <li>Link: Anticipating high-risk situations</li>
+          <li>Link: ACE strategies: Avoid, Cope &amp; Escape</li>
+          <li>Link: Managing negative emotions</li>
+          <li>Link: Coping with nicotine withdrawal</li>
+          <li>Link: Managing stress with box breathing</li>
+        </ul>
+      </mat-panel-description>
+      <mat-action-row>
+        <button mat-flat-button class="full-width-field" (click)="onRead(4)">
+          Mark as read
+        </button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
 
   <h4>One Week Before Your Quit Date</h4>
   <mat-expansion-panel class="card-expand" #panel5>

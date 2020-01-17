@@ -1,47 +1,49 @@
 <mat-sidenav-container>
-  <mat-sidenav #sidenav id='sidenav-base' class='border' position='end' role='navigation'>
-    <div id='menu-header'>
+  <mat-sidenav
+    #sidenav
+    id="sidenav-base"
+    class="border"
+    position="end"
+    role="navigation"
+  >
+    <div id="menu-header">
       <span>
-        <a id='cancel-button' class='clickable' (click)="sidenav.close()">
+        <a id="cancel-button" class="clickable" (click)="sidenav.close()">
           cancel
         </a>
       </span>
       <span>Menu</span>
     </div>
-    <mat-nav-list id='nav-list'>
+    <mat-nav-list id="nav-list">
       <a mat-list-item>
         About (info icon)
       </a>
       <a mat-list-item>
-        Contact
-        (mail_outline icon)
+        Contact (mail_outline icon)
       </a>
       <a mat-list-item>
-        Tutorial
-        class icon
+        Tutorial class icon
       </a>
       <a mat-list-item>
-        Settings
-        settings_applications icon
+        Settings settings_applications icon
       </a>
     </mat-nav-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
-
-    <mat-toolbar class='toolbar'>
+    <mat-toolbar class="toolbar">
       <mat-toolbar-row style="justify-content: space-between;">
         <span>
-          <a (click)="goBack()" class='clickable'>
+          <a (click)="goBack()" class="clickable">
             arrow_back_ios icon
           </a>
-          <a mat-button routerLink=''>
-            <img src='assets/diamond.svg' />
+          <a mat-button routerLink="">
+            <img src="assets/diamond.svg" />
           </a>
         </span>
         <span>{{ pageTitle }}</span>
         <span>
-          <a (click)="sidenav.open()" class='clickable'>
+          <a (click)="sidenav.open()" class="clickable">
             more_vert icon
           </a>
         </span>
@@ -51,27 +53,42 @@
     <router-outlet></router-outlet>
 
     <footer>
-      <a mat-button aria-label='Home button'
-        routerLink='/quit-guide' routerLinkActive='active'>
-        <img src='assets/home.svg' />
+      <a
+        mat-button
+        aria-label="Home button"
+        routerLink="/quit-guide"
+        routerLinkActive="active"
+      >
+        <img src="assets/home.svg" />
         Home
       </a>
-      <a mat-button aria-label='Journal button'
-        routerLink='/journal-list' routerLinkActive='active'>
-        <img src='assets/contract.svg' />
+      <a
+        mat-button
+        aria-label="Journal button"
+        routerLink="/journal/list"
+        routerLinkActive="active"
+      >
+        <img src="assets/contract.svg" />
         Journal
       </a>
-      <a mat-button aria-label='Toolbox button'
-        routerLink='' routerLinkActive='active'>
-        <img src='assets/small-toolbox.svg' />
+      <a
+        mat-button
+        aria-label="Toolbox button"
+        routerLink=""
+        routerLinkActive="active"
+      >
+        <img src="assets/small-toolbox.svg" />
         Toolbox
       </a>
-      <a mat-button aria-label='More help button'
-        routerLink='' routerLinkActive='active'>
-        <img src='assets/help-circle-outline.svg' />
+      <a
+        mat-button
+        aria-label="More help button"
+        routerLink=""
+        routerLinkActive="active"
+      >
+        <img src="assets/help-circle-outline.svg" />
         More Help
       </a>
     </footer>
-
   </mat-sidenav-content>
 </mat-sidenav-container>

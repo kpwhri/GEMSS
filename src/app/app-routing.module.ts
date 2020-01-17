@@ -1,14 +1,13 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-
-import { JournalListComponent } from "./journal-list/journal-list.component";
-import { JournalDetailComponent } from "./journal-detail/journal-detail.component";
-import { QuitGuideModule } from "./quit-guide/quit-guide.module";
+import { JournalListComponent } from "./journal/journal-list/journal-list.component";
 
 const routes: Routes = [
-  { path: "journal-list", component: JournalListComponent },
-  { path: "journal-detail/:id", component: JournalDetailComponent },
-  { path: "journal-detail", component: JournalDetailComponent },
+  {
+    path: "journal",
+    loadChildren: () =>
+      import("./journal/journal.module").then(mod => mod.JournalModule)
+  },
   {
     path: "quit-guide",
     loadChildren: () =>

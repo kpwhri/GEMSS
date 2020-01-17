@@ -7,7 +7,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 
 import { environment } from "../environments/environment";
 
-import { MatExpansionModule } from "@angular/material/expansion";
+// import { MatExpansionModule } from "@angular/material/expansion";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatInputModule } from "@angular/material/input";
@@ -21,20 +21,16 @@ import { InMemDataService } from "./in-mem-data.service";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 // import { GemTopViewComponent } from "./gem-top-view/gem-top-view.component";
-import { NavigationComponent } from "./navigation/navigation.component";
-import { JournalListComponent } from "./journal-list/journal-list.component";
-import { JournalDetailComponent } from "./journal-detail/journal-detail.component";
-import { JournalImageComponent } from "./journal-image/journal-image.component";
 import { MessagesComponent } from "./messages/messages.component";
+import { JournalModule } from "./journal/journal.module";
+import { NavigationComponent } from "./navigation/navigation.component";
 import { QuitGuideModule } from "./quit-guide/quit-guide.module";
+import { MatExpansionModule } from "@angular/material/expansion";
 
 @NgModule({
   declarations: [
     AppComponent,
     // GemTopViewComponent,
-    JournalListComponent,
-    JournalDetailComponent,
-    JournalImageComponent,
     NavigationComponent,
     MessagesComponent
   ],
@@ -44,6 +40,8 @@ import { QuitGuideModule } from "./quit-guide/quit-guide.module";
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    JournalModule,
+    // MatExpansionModule,
     MatFormFieldModule,
     MatGridListModule,
     MatInputModule,

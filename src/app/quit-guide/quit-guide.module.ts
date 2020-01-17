@@ -96,6 +96,7 @@ import { QuitGuideRoutingModule } from "./quit-guide-routing.module";
   ],
   exports: [
     MatCardModule,
+    MatExpansionModule,
     QuitGuideComponent,
     GemTopViewComponent,
     SteponeComponent,
