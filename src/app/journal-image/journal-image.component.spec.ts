@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatCardModule } from '@angular/material/card';
 
 import { JournalImageComponent } from './journal-image.component';
 
@@ -8,7 +9,8 @@ describe('JournalImageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ JournalImageComponent ]
+      declarations: [ JournalImageComponent ],
+      imports: [ MatCardModule ]
     })
     .compileComponents();
   }));

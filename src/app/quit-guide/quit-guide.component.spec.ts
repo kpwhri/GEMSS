@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatCardModule } from "@angular/material/card";
 
+import { GemTopViewComponent } from "../gem-top-view/gem-top-view.component";
 import { QuitGuideComponent } from './quit-guide.component';
 
 describe('QuitGuideComponent', () => {
@@ -8,7 +10,8 @@ describe('QuitGuideComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QuitGuideComponent ]
+      declarations: [ QuitGuideComponent, GemTopViewComponent ],
+      imports: [ MatCardModule ]
     })
     .compileComponents();
   }));

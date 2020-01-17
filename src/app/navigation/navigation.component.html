@@ -2,28 +2,27 @@
   <mat-sidenav #sidenav id='sidenav-base' class='border' position='end' role='navigation'>
     <div id='menu-header'>
       <span>
-        <a mat-icon-button id='cancel-button' class='clickable'>
-          <mat-icon (click)="sidenav.close()">cancel</mat-icon>
+        <a id='cancel-button' class='clickable' (click)="sidenav.close()">
+          cancel
         </a>
       </span>
       <span>Menu</span>
     </div>
     <mat-nav-list id='nav-list'>
       <a mat-list-item>
-        About
-        <mat-icon>info</mat-icon>
+        About (info icon)
       </a>
       <a mat-list-item>
         Contact
-        <mat-icon>mail_outline</mat-icon>
+        (mail_outline icon)
       </a>
       <a mat-list-item>
         Tutorial
-        <mat-icon>class</mat-icon>
+        class icon
       </a>
       <a mat-list-item>
         Settings
-        <mat-icon>settings_applications</mat-icon>
+        settings_applications icon
       </a>
     </mat-nav-list>
   </mat-sidenav>
@@ -33,17 +32,17 @@
     <mat-toolbar class='toolbar'>
       <mat-toolbar-row style="justify-content: space-between;">
         <span>
-          <a mat-icon-button (click)="goBack()" class='clickable'>
-            <mat-icon>arrow_back_ios</mat-icon>
+          <a (click)="goBack()" class='clickable'>
+            arrow_back_ios icon
           </a>
           <a mat-button routerLink=''>
             <img src='assets/diamond.svg' />
           </a>
         </span>
-        <span>Icon fallback when offline?   {{ pageTitle }}</span>
+        <span>{{ pageTitle }}</span>
         <span>
-          <a mat-icon-button (click)="sidenav.open()" class='clickable'>
-            <mat-icon>more_vert</mat-icon>
+          <a (click)="sidenav.open()" class='clickable'>
+            more_vert icon
           </a>
         </span>
       </mat-toolbar-row>

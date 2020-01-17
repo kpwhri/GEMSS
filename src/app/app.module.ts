@@ -10,7 +10,6 @@ import { environment } from "../environments/environment";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatGridListModule } from "@angular/material/grid-list";
-import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { MatListModule } from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
@@ -47,7 +46,6 @@ import { QuitGuideModule } from "./quit-guide/quit-guide.module";
     HttpClientModule,
     MatFormFieldModule,
     MatGridListModule,
-    MatIconModule,
     MatInputModule,
     MatListModule,
     MatSidenavModule,
