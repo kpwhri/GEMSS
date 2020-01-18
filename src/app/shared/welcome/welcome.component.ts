@@ -27,7 +27,7 @@ import { Component, OnInit } from "@angular/core";
       </button>
     </div>
   `,
-  styleUrls: ["./shared.component.scss"]
+  styleUrls: ["../shared.component.scss"]
 })
 export class WelcomeComponent implements OnInit {
   constructor() {}
