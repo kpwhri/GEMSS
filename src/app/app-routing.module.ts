@@ -13,9 +13,15 @@ const routes: Routes = [
     loadChildren: () =>
       import("./quit-guide/quit-guide.module").then(mod => mod.QuitGuideModule)
   },
-  { path: 'shared',
+  {
+    path: "shared",
     loadChildren: () =>
-      import('./shared/shared.module').then(m => m.SharedModule)
+      import("./shared/shared.module").then(m => m.SharedModule)
+  },
+  {
+    path: "toolbox",
+    loadChildren: () =>
+      import("./toolbox/toolbox.module").then(m => m.ToolboxModule)
   }
 ];
 

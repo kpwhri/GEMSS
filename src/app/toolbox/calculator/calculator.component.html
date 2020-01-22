@@ -1,0 +1,77 @@
+<h3>Savings Calculator</h3>
+<div id="savings-form">
+  <p>Calculate how much money you could save by not smoking:</p>
+  <p>You really smoking {{ packs }} per day?</p>
+  <mat-list>
+    <mat-list-item>
+      <div class="form-field">
+        <label for="packs">Packs per day smoked:</label>
+        <input
+          [(ngModel)]="packs"
+          type="number"
+          matInput
+          autofocus
+          placeholder="#"
+        />
+      </div>
+    </mat-list-item>
+
+    <mat-list-item>
+      <div class="form-field">
+        <label for="cost">Cost per pack:</label>
+        <input [(ngModel)]="cost" type="number" matInput placeholder="$" />
+      </div>
+    </mat-list-item>
+
+    <mat-list-item>
+      <button
+        id="calculate"
+        raised-button
+        class="full-width-field"
+        (click)="onSubmit()"
+      >
+        Calculate
+      </button>
+    </mat-list-item>
+
+    <mat-list-item>
+      <p class="dark-blue-text">Your savings:</p>
+    </mat-list-item>
+
+    <mat-list-item>
+      <div class="form-field">
+        <label for="weekly-cost">Weekly:</label>
+        <input
+          id="weekly-cost"
+          type="text"
+          matInput
+          [ngModel]="weekly | currency: 'USD'"
+        />
+      </div>
+    </mat-list-item>
+
+    <mat-list-item>
+      <div class="form-field">
+        <label for="monthly-cost">Monthly:</label>
+        <input
+          id="monthly-cost"
+          type="text"
+          matInput
+          [ngModel]="monthly | currency: 'USD'"
+        />
+      </div>
+    </mat-list-item>
+
+    <mat-list-item>
+      <div class="form-field">
+        <label for="yearly-cost">Yearly:</label>
+        <input
+          id="yearly-cost"
+          type="text"
+          matInput
+          [ngModel]="yearly | currency: 'USD'"
+        />
+      </div>
+    </mat-list-item>
+  </mat-list>
+</div>

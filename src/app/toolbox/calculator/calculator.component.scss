@@ -1,0 +1,29 @@
+@import "../../app.component.scss";
+
+#savings-form {
+  padding: 5px;
+}
+
+.form-field {
+  background-color: $light-blue;
+  box-shadow: 0 3px 6px lightgray;
+  // margin: 5px;
+  padding: 5px;
+  width: 100%;
+}
+
+.form-field input {
+  float: right;
+}
+
+#calculate {
+  background-color: $dark-blue;
+  color: white;
+  font-size: 20px;
+  margin-top: 12px;
+  padding: 13px;
+}
+
+.dark-blue-text {
+  color: $dark-blue;
+}
