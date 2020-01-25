@@ -29,8 +29,33 @@
 }
 
 #cancel-button {
-  color: $blue-text;
+  background-color: $blue-text;
+  border-radius: 50%;
+  color: white !important;
+  display: table-cell;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  width: 25px;
 }
+
+a.back-arrow {
+  font-size: 150%;
+  margin: auto;
+}
+
+a.kebab {
+  font-size: 120%;
+  font-weight: 900;
+}
+
+// span.nav-caption {
+//   // display: inline-block;
+//   float: left;
+// }
+// img.right-justify {
+//   float: right;
+// }
 
 .toolbar {
   background-image: linear-gradient(#0086cf, #005d8f);

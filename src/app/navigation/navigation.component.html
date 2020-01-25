@@ -9,23 +9,33 @@
     <div id="menu-header">
       <span>
         <a id="cancel-button" class="clickable" (click)="sidenav.close()">
-          cancel
+          x
         </a>
       </span>
       <span>Menu</span>
     </div>
     <mat-nav-list id="nav-list">
-      <a mat-list-item routerLink="/shared/about" (click)="sidenav.close()">
-        About (info icon)
+      <a
+        mat-list-item
+        routerLink="/shared/about"
+        (click)="sidenav.close()"
+        style="display: flex; justify-content: space-between"
+      >
+        <div class="nav-caption">About</div>
+        <div>&mdash;</div>
+        <div><img src="assets/KP_Info_icon.svg" /></div>
       </a>
       <a mat-list-item routerLink="/shared/contact" (click)="sidenav.close()">
-        Contact (mail_outline icon)
+        <span class="nav-caption">Contact</span>
+        <img src="assets/KP_Message_icon.svg" />
       </a>
       <a mat-list-item>
-        Tutorial class icon (is this going anywhere?)
+        <span class="nav-caption">?Tutorial?</span>
+        <img src="assets/KP_Touch_icon.svg" />
       </a>
       <a mat-list-item>
-        Settings settings_applications icon (is this going anywhere?)
+        <span class="nav-caption"> ?Settings?</span>
+        <img src="assets/gear.svg" />
       </a>
     </mat-nav-list>
   </mat-sidenav>
@@ -34,8 +44,8 @@
     <mat-toolbar class="toolbar">
       <mat-toolbar-row style="justify-content: space-between;">
         <span>
-          <a (click)="goBack()" class="clickable">
-            arrow_back_ios icon
+          <a (click)="goBack()" class="clickable back-arrow">
+            &lsaquo;
           </a>
           <a mat-button routerLink="">
             <img src="assets/diamond.svg" />
@@ -43,8 +53,8 @@
         </span>
         <span>{{ pageTitle }}</span>
         <span>
-          <a (click)="sidenav.open()" class="clickable">
-            more_vert icon
+          <a (click)="sidenav.open()" class="clickable kebab">
+            &#8942;
           </a>
         </span>
       </mat-toolbar-row>
@@ -53,6 +63,7 @@
     <router-outlet></router-outlet>
 
     <footer>
+      <p>Probly use navlist?</p>
       <a
         mat-button
         aria-label="Home button"
