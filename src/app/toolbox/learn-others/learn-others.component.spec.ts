@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LearnOthersComponent } from './learn-others.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 describe('LearnOthersComponent', () => {
   let component: LearnOthersComponent;
@@ -8,7 +10,8 @@ describe('LearnOthersComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LearnOthersComponent ]
+      declarations: [ LearnOthersComponent ],
+      imports: [ BrowserAnimationsModule, MatExpansionModule ]
     })
     .compileComponents();
   }));

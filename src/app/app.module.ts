@@ -26,6 +26,7 @@ import { JournalModule } from "./journal/journal.module";
 import { NavigationComponent } from "./navigation/navigation.component";
 import { QuitGuideModule } from "./quit-guide/quit-guide.module";
 import { SharedModule } from "./shared/shared.module";
+import { ToolboxModule } from './toolbox/toolbox.module';
 // import { MatExpansionModule } from "@angular/material/expansion";
 
 @NgModule({
@@ -33,7 +34,9 @@ import { SharedModule } from "./shared/shared.module";
     AppComponent,
     // GemTopViewComponent,
     NavigationComponent,
-    MessagesComponent
+    MessagesComponent,
+    QuitGuideModule,
+    ToolboxModule
   ],
   imports: [
     AppRoutingModule,
