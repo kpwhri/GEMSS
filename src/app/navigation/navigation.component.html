@@ -19,23 +19,35 @@
         mat-list-item
         routerLink="/shared/about"
         (click)="sidenav.close()"
-        style="display: flex; justify-content: space-between"
+        style="display: flex; justify-content: flex-end"
       >
         <div class="nav-caption">About</div>
-        <div>&mdash;</div>
-        <div><img src="assets/KP_Info_icon.svg" /></div>
+        <div class="img">
+          <img src="assets/KP_Info_icon.svg" />
+        </div>
       </a>
-      <a mat-list-item routerLink="/shared/contact" (click)="sidenav.close()">
-        <span class="nav-caption">Contact</span>
-        <img src="assets/KP_Message_icon.svg" />
+      <a
+        mat-list-item
+        routerLink="/shared/contact"
+        (click)="sidenav.close()"
+        style="display: flex; justify-content: flex-end"
+      >
+        <div class="nav-caption">Contact</div>
+        <div class="img">
+          <img src="assets/KP_Message_icon.svg" />
+        </div>
       </a>
-      <a mat-list-item>
-        <span class="nav-caption">?Tutorial?</span>
-        <img src="assets/KP_Touch_icon.svg" />
+      <a mat-list-item style="display: flex; justify-content: flex-end">
+        <div class="nav-caption">?Tutorial?</div>
+        <div class="img">
+          <img src="assets/KP_Touch_icon.svg" />
+        </div>
       </a>
-      <a mat-list-item>
-        <span class="nav-caption"> ?Settings?</span>
-        <img src="assets/gear.svg" />
+      <a mat-list-item style="display: flex; justify-content: flex-end">
+        <div class="nav-caption">?Settings?</div>
+        <div class="img">
+          <img src="assets/gear.svg" />
+        </div>
       </a>
     </mat-nav-list>
   </mat-sidenav>
@@ -63,14 +75,13 @@
     <router-outlet></router-outlet>
 
     <footer>
-      <p>Probly use navlist?</p>
       <a
         mat-button
         aria-label="Home button"
         routerLink="/quit-guide"
         routerLinkActive="active"
       >
-        <img src="assets/home.svg" />
+        <img class="img" src="assets/home.svg" />
         Home
       </a>
       <a
@@ -79,7 +90,7 @@
         routerLink="/journal/list"
         routerLinkActive="active"
       >
-        <img src="assets/contract.svg" />
+        <img class="img" src="assets/contract.svg" />
         Journal
       </a>
       <a
@@ -88,7 +99,7 @@
         routerLink="toolbox"
         routerLinkActive="active"
       >
-        <img src="assets/small-toolbox.svg" />
+        <img class="img" src="assets/small-toolbox.svg" />
         Toolbox
       </a>
       <a
@@ -97,7 +108,7 @@
         routerLink="/shared/more-help"
         routerLinkActive="active"
       >
-        <img src="assets/help-circle-outline.svg" />
+        <img class="img" src="assets/help-circle-outline.svg" />
         More Help
       </a>
     </footer>

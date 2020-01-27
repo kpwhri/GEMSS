@@ -8,11 +8,11 @@ import { Component, OnInit } from "@angular/core";
 export class CalculatorComponent implements OnInit {
   constructor() {}
 
-  private packs: number;
-  private cost: number;
-  private weekly: number;
-  private monthly: number;
-  private yearly: number;
+  packs: number;
+  cost: number;
+  weekly: number;
+  monthly: number;
+  yearly: number;
 
   get_daily_cost(packs: number, cost: number) {
     return packs * cost;
