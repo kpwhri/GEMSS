@@ -5,6 +5,23 @@ h2 {
   padding-left: 15px;
 }
 
+.step-check {
+  // background-image: url("/assets/steps/check_circle_unchecked.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  min-width: 20px;
+  min-height: 20px;
+  padding-left: 5px;
+}
+
+.unchecked {
+  background-image: url("/assets/steps/check_circle_unchecked.svg");
+}
+.checked {
+  background-image: url("/assets/steps/check_circle_checked.svg");
+}
+
 #main-component {
   padding: 10px;
 }
@@ -53,12 +70,9 @@ mat-card.negative-emotion-card {
 
 // https://davidwalsh.name/css-flip
 .flip-container {
-  margin-top: -20px;
   perspective: 1000px;
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
-  border: solid 1px black;
   border-radius: 5%;
 }
 
@@ -78,10 +92,15 @@ mat-card.negative-emotion-card {
 .back {
   backface-visibility: hidden;
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100px;
+  height: 100%;
+  padding: 0 5px 15px 15px;
+  text-align: center;
+
+  img {
+    height: 56px;
+    width: auto;
+  }
 }
 
 .front {
@@ -89,23 +108,34 @@ mat-card.negative-emotion-card {
 }
 
 .back {
-  background-color: burlywood;
+  background-color: $light-green;
   transform: rotateY(180deg);
 }
 
 li.pill {
   border: 1px solid #abbe8c;
-  border-radius: 20%/50%;
+  // border-radius: 20%/50%;
   list-style-type: none;
   padding: 15px;
-  span.pill-title {
+  border-bottom-left-radius: 15% 100%;
+  border-bottom-right-radius: 15% 100%;
+  border-top-left-radius: 15% 100%;
+  border-top-right-radius: 15% 100%;
+
+  div.pill-title {
+    float: left;
+    display: table-cell;
+    vertical-align: middle;
     background-color: $light-green;
     border: 1px solid $dark-green;
     border-radius: 50%;
     font-weight: bold;
     height: 100px;
+    width: 100px;
     padding: 15px;
     text-align: center;
-    width: 100px;
+  }
+
+  div.pill-content {
   }
 }

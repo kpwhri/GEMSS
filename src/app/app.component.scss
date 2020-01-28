@@ -4,6 +4,7 @@ $light-blue: #cce3f2;
 $rave-green: #57a635;
 $dark-green: #abbe8c;
 $light-green: #ddf2bb;
+$gray: #b3b6c5;
 
 :host {
   font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
@@ -21,4 +22,16 @@ $light-green: #ddf2bb;
 
 .full-width-field {
   width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .full-width-image {
+    width: 100%;
+    margin: auto;
+    overflow: auto;
+  }
+}
+
+.blue-text {
+  color: $blue-text;
 }
