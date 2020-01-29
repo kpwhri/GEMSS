@@ -5,65 +5,70 @@
 </p>
 <p>Small: Tap each symptom to reveal tips</p>
 
-<mat-grid-list cols="3" rowHeight="80px">
-  <mat-grid-tile (click)="openDialog(0)">
-    <p>Cigs pic</p>
+<mat-grid-list
+  cols="3"
+  rowHeight="80px"
+  gutterSize="10px"
+  style="padding-bottom: 15px;"
+>
+  <mat-grid-tile class="withdrawal-tile" (click)="openDialog(0)">
+    <mat-grid-tile-header>Cigs pic</mat-grid-tile-header>
     <mat-grid-tile-footer>
       Cravings/Urges
     </mat-grid-tile-footer>
   </mat-grid-tile>
 
-  <mat-grid-tile (click)="openDialog(1)">
-    <p>Swear pic</p>
+  <mat-grid-tile class="withdrawal-tile" (click)="openDialog(1)">
+    <mat-grid-tile-header>Swear pic</mat-grid-tile-header>
     <mat-grid-tile-footer>
       Irritability
     </mat-grid-tile-footer>
   </mat-grid-tile>
 
-  <mat-grid-tile (click)="openDialog(2)">
-    <p>Plate pic</p>
+  <mat-grid-tile class="withdrawal-tile" (click)="openDialog(2)">
+    <mat-grid-tile-header>Plate pic</mat-grid-tile-header>
     <mat-grid-tile-footer>
       Hunger
     </mat-grid-tile-footer>
   </mat-grid-tile>
 
-  <mat-grid-tile (click)="openDialog(3)">
-    <p>Think pic</p>
+  <mat-grid-tile class="withdrawal-tile" (click)="openDialog(3)">
+    <mat-grid-tile-header>Think pic</mat-grid-tile-header>
     <mat-grid-tile-footer>
       Poor Concentration
     </mat-grid-tile-footer>
   </mat-grid-tile>
 
-  <mat-grid-tile (click)="openDialog(4)">
-    <p>Storm pic</p>
+  <mat-grid-tile class="withdrawal-tile" (click)="openDialog(4)">
+    <mat-grid-tile-header>Storm pic</mat-grid-tile-header>
     <mat-grid-tile-footer>
       Sadness
     </mat-grid-tile-footer>
   </mat-grid-tile>
 
-  <mat-grid-tile (click)="openDialog(5)">
-    <p>Sleepy pic</p>
+  <mat-grid-tile class="withdrawal-tile" (click)="openDialog(5)">
+    <mat-grid-tile-header>Sleepy pic</mat-grid-tile-header>
     <mat-grid-tile-footer>
       Fatigue
     </mat-grid-tile-footer>
   </mat-grid-tile>
 
-  <mat-grid-tile (click)="openDialog(6)">
-    <p>Poop pic</p>
+  <mat-grid-tile class="withdrawal-tile" (click)="openDialog(6)">
+    <mat-grid-tile-header>Poop pic</mat-grid-tile-header>
     <mat-grid-tile-footer>
       Constipation
     </mat-grid-tile-footer>
   </mat-grid-tile>
 
-  <mat-grid-tile (click)="openDialog(7)">
-    <p>Headache pic</p>
+  <mat-grid-tile class="withdrawal-tile" (click)="openDialog(7)">
+    <mat-grid-tile-header>Headache pic</mat-grid-tile-header>
     <mat-grid-tile-footer>
       Headache
     </mat-grid-tile-footer>
   </mat-grid-tile>
 
-  <mat-grid-tile (click)="openDialog(8)">
-    <p>Bed pic</p>
+  <mat-grid-tile class="withdrawal-tile" (click)="openDialog(8)">
+    <mat-grid-tile-header>Bed pic</mat-grid-tile-header>
     <mat-grid-tile-footer>
       Insomnia
     </mat-grid-tile-footer>

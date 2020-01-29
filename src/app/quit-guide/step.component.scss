@@ -114,18 +114,18 @@ mat-card.negative-emotion-card {
 
 li.pill {
   border: 1px solid #abbe8c;
-  // border-radius: 20%/50%;
   list-style-type: none;
   padding: 15px;
   border-bottom-left-radius: 15% 100%;
   border-bottom-right-radius: 15% 100%;
   border-top-left-radius: 15% 100%;
   border-top-right-radius: 15% 100%;
+  // Clear float
+  overflow: auto;
+  width: 100%;
 
   div.pill-title {
     float: left;
-    display: table-cell;
-    vertical-align: middle;
     background-color: $light-green;
     border: 1px solid $dark-green;
     border-radius: 50%;
@@ -137,5 +137,32 @@ li.pill {
   }
 
   div.pill-content {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
+}
+
+.negative-emotion-card {
+  box-shadow: 0px 3px 6px #00000029;
+  margin-bottom: 10px;
+}
+
+.withdrawal-tile {
+  border: #707070;
+  border-radius: 20px;
+  box-shadow: 0 6px 6px $gray;
+  cursor: pointer;
+  text-align: center;
+}
+
+p.small-blue-text {
+  color: $blue-text;
+  font-size: 13px;
+}
+
+.mat-grid-tile .mat-grid-tile-footer,
+.mat-grid-tile .mat-grid-tile-header {
+  background-color: $light-blue;
+  color: $dark-blue-text;
 }
