@@ -1,6 +1,8 @@
 @import "../app.component.scss";
 
-h2 {
+h2,
+h3,
+h4 {
   color: $dark-blue;
   padding-left: 15px;
 }
@@ -37,10 +39,16 @@ button {
   font-size: 120%;
   font-weight: 600;
   padding: 20px 0 20px 0;
+}
 
-  .green-button {
-    background-color: $light-green;
-  }
+.light-green-button {
+  background-color: $light-green !important;
+  color: black;
+}
+
+.blue-button {
+  background-color: $dark-blue;
+  color: white !important;
 }
 
 .mat-dialog-title {
@@ -165,4 +173,25 @@ p.small-blue-text {
 .mat-grid-tile .mat-grid-tile-header {
   background-color: $light-blue;
   color: $dark-blue-text;
+  justify-content: center;
+}
+
+ul.highlight-list {
+  padding-left: 0;
+  li {
+    background-color: $light-blue;
+    border-radius: 4px;
+    list-style-position: inside;
+    list-style-type: none;
+    margin-bottom: 10px;
+    padding: 5px 5px 8px 8px;
+  }
+  li:before {
+    display: inline-block;
+    padding-right: 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: right;
+    content: "\2022";
+  }
 }

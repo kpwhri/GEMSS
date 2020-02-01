@@ -1,4 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-dialog-container#withdrawal-panel {
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  .mat-dialog-title {
+    font-weight: bold;
+    color: #003b71;
+    padding: 15px;
+    text-align: center;
+  }
+  .mat-dialog-content {
+    padding-right: 20px;
+  }
+  .mat-dialog-actions {
+    margin: 0;
+    padding: 10px;
+  }
+  #bottom-theming {
+    background-color: #cce3f2;
+    margin-top: 10px;
+    padding-bottom: 25px;
+  }
+  a.deep-link {
+    color: #0078b3;
+    cursor: pointer;
+    text-decoration-line: underline;
+  }
+}

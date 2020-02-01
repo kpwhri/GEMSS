@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { Router } from "@angular/router";
 
 import { MatDialogRef } from "@angular/material/dialog";
@@ -23,19 +23,20 @@ import { MatDialogRef } from "@angular/material/dialog";
         <li>Suck on a piece of candy</li>
         <li>
           Practice
-          <a (click)="goToBreathing()">box breathing</a>
+          <a class="deep-link" (click)="goToBreathing()">Box Breathing</a>
         </li>
       </ul>
     </mat-dialog-content>
     <mat-dialog-actions>
       <button
-        mat-flat-button
-        class="full-width-field green-button"
+        mat-button
+        class="full-width-field light-green-button"
         (click)="closeDialog()"
       >
         Got it!
       </button>
     </mat-dialog-actions>
+    <div id="bottom-theming"></div>
   `,
   styleUrls: ["../step.component.scss"]
 })

@@ -20,12 +20,13 @@ import { MatDialogRef } from "@angular/material/dialog";
     <mat-dialog-actions>
       <button
         mat-flat-button
-        class="full-width-field green-button"
+        class="full-width-field light-green-button"
         (click)="closeDialog()"
       >
         Got it!
       </button>
     </mat-dialog-actions>
+    <div id="bottom-theming"></div>
   `,
   styleUrls: ["../step.component.scss"]
 })

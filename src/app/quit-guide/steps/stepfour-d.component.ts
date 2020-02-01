@@ -35,8 +35,9 @@ export class StepfourDComponent implements OnInit {
 
   openDialog(dialogNumber: number) {
     const dialogConfig = new MatDialogConfig();
+    dialogConfig.closeOnNavigation = false;
     dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
+    dialogConfig.id = "withdrawal-panel";
     this.dialog.open(this.dialogArray[dialogNumber], dialogConfig);
   }
 
