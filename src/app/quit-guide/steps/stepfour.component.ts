@@ -10,13 +10,13 @@ import { MatExpansionPanel } from "@angular/material/expansion";
   styleUrls: ["../step.component.scss"]
 })
 export class StepfourComponent implements OnInit {
-  @ViewChild("panel0", { static: false }) panel0: ElementRef<MatExpansionPanel>;
-  @ViewChild("panel1", { static: false }) panel1: ElementRef<MatExpansionPanel>;
-  @ViewChild("panel2", { static: false }) panel2: ElementRef<MatExpansionPanel>;
-  @ViewChild("panel3", { static: false }) panel3: ElementRef<MatExpansionPanel>;
-  @ViewChild("panel4", { static: false }) panel4: ElementRef<MatExpansionPanel>;
-  @ViewChild("panel5", { static: false }) panel5: ElementRef<MatExpansionPanel>;
-  @ViewChild("panel6", { static: false }) panel6: ElementRef<MatExpansionPanel>;
+  @ViewChild("panel0") panel0: ElementRef<MatExpansionPanel>;
+  @ViewChild("panel1") panel1: ElementRef<MatExpansionPanel>;
+  @ViewChild("panel2") panel2: ElementRef<MatExpansionPanel>;
+  @ViewChild("panel3") panel3: ElementRef<MatExpansionPanel>;
+  @ViewChild("panel4") panel4: ElementRef<MatExpansionPanel>;
+  @ViewChild("panel5") panel5: ElementRef<MatExpansionPanel>;
+  @ViewChild("panel6") panel6: ElementRef<MatExpansionPanel>;
 
   constructor(private stepService: StepService, private router: Router) {}
 

@@ -8,14 +8,14 @@ import { StepService } from "../step.service";
   styleUrls: ["../step.component.scss"]
 })
 export class StepfourAComponent implements OnInit {
-  @ViewChild("panel0", { static: false }) panel0: ElementRef;
-  @ViewChild("panel1", { static: false }) panel1: ElementRef;
-  @ViewChild("panel2", { static: false }) panel2: ElementRef;
-  @ViewChild("panel3", { static: false }) panel3: ElementRef;
-  @ViewChild("panel4", { static: false }) panel4: ElementRef;
-  @ViewChild("panel5", { static: false }) panel5: ElementRef;
-  @ViewChild("panel6", { static: false }) panel6: ElementRef;
-  @ViewChild("panel7", { static: false }) panel7: ElementRef;
+  @ViewChild("panel0") panel0: ElementRef;
+  @ViewChild("panel1") panel1: ElementRef;
+  @ViewChild("panel2") panel2: ElementRef;
+  @ViewChild("panel3") panel3: ElementRef;
+  @ViewChild("panel4") panel4: ElementRef;
+  @ViewChild("panel5") panel5: ElementRef;
+  @ViewChild("panel6") panel6: ElementRef;
+  @ViewChild("panel7") panel7: ElementRef;
 
   constructor(private stepService: StepService, private el: ElementRef) {}
 
