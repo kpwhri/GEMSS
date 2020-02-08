@@ -63,8 +63,8 @@
             <img src="assets/diamond.svg" />
           </a>
         </span>
-        <span>{{ pageTitle }}</span>
-        <span>
+        <span id='header-page-title'>{{ pageTitle }}</span>
+        <span id='last-toolbar-element'>
           <a (click)="sidenav.open()" class="clickable kebab">
             &#8942;
           </a>
@@ -72,7 +72,9 @@
       </mat-toolbar-row>
     </mat-toolbar>
 
-    <router-outlet></router-outlet>
+    <div id='main-middle-content'>
+      <router-outlet></router-outlet>
+    </div>
 
     <footer>
       <a

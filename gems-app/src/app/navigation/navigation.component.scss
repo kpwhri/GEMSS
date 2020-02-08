@@ -27,6 +27,10 @@
   justify-content: space-between;
 }
 
+#header-page-title {
+  text-align: center;
+}
+
 .clickable {
   cursor: pointer;
 }
@@ -57,7 +61,6 @@ a.kebab {
   color: white;
   font-weight: 600;
   height: 60px;
-  margin: -8px;
 }
 
 .toolbar img {
@@ -65,11 +68,24 @@ a.kebab {
   height: 14px;
 }
 
+// Set equal widths for toolbar elements so flexbox spaces evenly
+.mat-toolbar-row span {
+  width: 15%;
+}
+
+#last-toolbar-element {
+  text-align: right;
+}
+
+#main-middle-content {
+  margin: 10px;
+}
+
 footer {
   background-image: linear-gradient(#0086cf, #005d8f);
   color: white;
   line-height: 20px;
-  padding-top: 8px;
+  padding: 5px 0;
   display: flex;
   justify-content: space-around;
 }

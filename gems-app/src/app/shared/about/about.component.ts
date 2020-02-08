@@ -4,8 +4,7 @@ import { Component, OnInit } from "@angular/core";
   selector: "app-about",
   template: `
     <div>
-      <div>GEMS</div>
-      <div>With sweet picture of gem</div>
+      <img id='sweet-gem' src="assets/sweet-gem.png" />
     </div>
     <h2>About GEMS</h2>
     <p>
@@ -24,7 +23,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["../shared.component.scss"]
 })
 export class AboutComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
