@@ -1,5 +1,9 @@
 @import "../../app.component.scss";
 
+h3 {
+  text-align: center;
+}
+
 #savings-form {
   padding: 5px;
 }
@@ -7,7 +11,6 @@
 .form-field {
   background-color: $light-blue;
   box-shadow: 0 3px 6px lightgray;
-  // margin: 5px;
   padding: 5px;
   width: 100%;
 }
@@ -20,7 +23,8 @@
   background-color: $dark-blue;
   color: white;
   font-size: 20px;
-  margin-top: 12px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   padding: 13px;
 }
 

@@ -8,8 +8,15 @@ body {
   text-align: center;
 }
 
+.vertical-grid img {
+  height: 15vw;
+}
+
 .mat-grid-tile {
   background-color: white;
   border-radius: 5px;
   cursor: pointer;
+  // margin: 5px;
+  // padding: 5px;
+  justify-content: space-evenly;
 }
