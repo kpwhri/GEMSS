@@ -27,6 +27,7 @@ REST_FRAMEWORK = {
 INSTALLED_APPS = [
     'rest_framework',
     'journals.apps.JournalsConfig',
+    'participants.apps.ParticipantsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
