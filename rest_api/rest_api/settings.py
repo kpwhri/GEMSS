@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'journals.apps.JournalsConfig',
     'participants.apps.ParticipantsConfig',
+    'trackers.apps.TrackersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
