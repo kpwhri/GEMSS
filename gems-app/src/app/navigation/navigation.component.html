@@ -1,11 +1,5 @@
 <mat-sidenav-container>
-  <mat-sidenav
-    #sidenav
-    id="sidenav-base"
-    class="border"
-    position="end"
-    role="navigation"
-  >
+  <mat-sidenav #sidenav id="sidenav-base" class="border" position="end" role="navigation">
     <div id="menu-header">
       <span>
         <a id="cancel-button" class="clickable" (click)="sidenav.close()">
@@ -15,23 +9,15 @@
       <span>Menu</span>
     </div>
     <mat-nav-list id="nav-list">
-      <a
-        mat-list-item
-        routerLink="/shared/about"
-        (click)="sidenav.close()"
-        style="display: flex; justify-content: flex-end"
-      >
+      <a mat-list-item routerLink="/shared/about" (click)="sidenav.close()"
+        style="display: flex; justify-content: flex-end">
         <div class="nav-caption">About</div>
         <div class="img">
           <img src="assets/KP_Info_icon.svg" />
         </div>
       </a>
-      <a
-        mat-list-item
-        routerLink="/shared/contact"
-        (click)="sidenav.close()"
-        style="display: flex; justify-content: flex-end"
-      >
+      <a mat-list-item routerLink="/shared/contact" (click)="sidenav.close()"
+        style="display: flex; justify-content: flex-end">
         <div class="nav-caption">Contact</div>
         <div class="img">
           <img src="assets/KP_Message_icon.svg" />
@@ -52,7 +38,7 @@
     </mat-nav-list>
   </mat-sidenav>
 
-  <mat-sidenav-content>
+  <mat-sidenav-content id='sidenav-content'>
     <mat-toolbar class="toolbar">
       <mat-toolbar-row style="justify-content: space-between;">
         <span>
@@ -77,39 +63,19 @@
     </div>
 
     <footer>
-      <a
-        mat-button
-        aria-label="Home button"
-        routerLink="/quit-guide"
-        routerLinkActive="active"
-      >
+      <a mat-button aria-label="Home button" routerLink="/quit-guide" routerLinkActive="active">
         <img class="img" src="assets/home.svg" />
         Home
       </a>
-      <a
-        mat-button
-        aria-label="Journal button"
-        routerLink="/journal/list"
-        routerLinkActive="active"
-      >
+      <a mat-button aria-label="Journal button" routerLink="/journal/list" routerLinkActive="active">
         <img class="img" src="assets/contract.svg" />
         Journal
       </a>
-      <a
-        mat-button
-        aria-label="Toolbox button"
-        routerLink="toolbox"
-        routerLinkActive="active"
-      >
+      <a mat-button aria-label="Toolbox button" routerLink="toolbox" routerLinkActive="active">
         <img class="img" src="assets/small-toolbox.svg" />
         Toolbox
       </a>
-      <a
-        mat-button
-        aria-label="More help button"
-        routerLink="/shared/more-help"
-        routerLinkActive="active"
-      >
+      <a mat-button aria-label="More help button" routerLink="/shared/more-help" routerLinkActive="active">
         <img class="img" src="assets/help-circle-outline.svg" />
         More Help
       </a>
