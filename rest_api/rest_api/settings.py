@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'journals.apps.JournalsConfig',
     'participants.apps.ParticipantsConfig',
     'trackers.apps.TrackersConfig',
+    'calculators.apps.CalculatorsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

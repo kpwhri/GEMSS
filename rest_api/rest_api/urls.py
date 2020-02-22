@@ -8,6 +8,7 @@ urlpatterns = [
     path('participant/', include('participants.urls')),
     path('journal/', include('journals.urls')),
     path('tracker/', include('trackers.urls')),
+    path('calculator/', include('calculators.urls')),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
 ]
