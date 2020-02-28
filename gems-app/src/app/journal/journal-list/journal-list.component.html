@@ -13,7 +13,8 @@
     *ngFor="let entry of entries"
     [journalDate]="entry.created"
     [journalTitle]="entry.title"
-    [journalEntry]="entry.content"
+    [journalEntry]="entry.entry"
+    [journalId]="entry.id"
   >
   </app-journal-image>
 </ng-template>

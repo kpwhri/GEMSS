@@ -10,7 +10,8 @@ import { Component, Input, OnInit } from "@angular/core";
 @Component({
   selector: "app-journal-image",
   template: `
-    <mat-card class="journal-item" style="display: flex;">
+    <mat-card class="journal-item" style="display: flex;"
+      [routerLink]="['/journal/detail/', journalId]">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -94,10 +95,11 @@ export class JournalImageComponent implements OnInit {
   @Input() journalDate: Date;
   @Input() journalTitle: string;
   @Input() journalEntry: string;
+  @Input() journalId: number;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
 
 // COLOR IS NOT WORKING FOR THE SVG TEXT

@@ -4,6 +4,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
 import { tap, catchError, map } from "rxjs/operators";
 
+import { httpOptions, apiUrl } from "../shared/globals";
 import { JournalEntry } from "./journal-entry";
 import { MessageService } from "../message.service";
 
@@ -14,21 +15,30 @@ export class JournalService {
   constructor(
     private http: HttpClient,
     private messageService: MessageService
-  ) {}
+  ) { }
 
-  apiUrl = "api/";
 
   getEntries(): Observable<JournalEntry[]> {
     this.messageService.add("JournalService: fetched entry");
     return this.http
-      .get<JournalEntry[]>(this.apiUrl + "journalEntries")
+      .get<JournalEntry[]>(apiUrl + "journal/entries", httpOptions)
       .pipe(catchError(this.handleError));
   }
 
   getEntry(entryId): Observable<JournalEntry> {
     return this.http
-      .get<JournalEntry>(this.apiUrl + "journalEntries/" + entryId)
+      .get<JournalEntry>(apiUrl + "journal/entries/" + entryId, httpOptions)
       .pipe(catchError(this.handleError));
+  }
+
+  saveEntry(journalEntry: { title: string, entry: string }) {
+    console.log("Got to saveEntry");
+    return this.http
+      .post<JournalEntry>(apiUrl + "journal/entries/", journalEntry, httpOptions)
+      .pipe(catchError(this.handleError))
+      .subscribe(responseData => {
+        console.log(responseData);
+      });
   }
 
   private handleError(error: any) {

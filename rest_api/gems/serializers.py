@@ -3,5 +3,5 @@ from rest_framework import serializers
 
 from gems.models import Gem, PageGem, PageRead, GemStatus
 
-class CalculatorSerializer(serializers.Serializer):
+class GemSerializer(serializers.Serializer):
   pass

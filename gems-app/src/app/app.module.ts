@@ -5,7 +5,7 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
 
-import { environment } from "../environments/environment";
+// import { environment } from "../environments/environment";
 
 // import { MatExpansionModule } from "@angular/material/expansion";
 import { MatFormFieldModule } from "@angular/material/form-field";
@@ -15,8 +15,8 @@ import { MatListModule } from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
 
-import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
-import { InMemDataService } from "./in-mem-data.service";
+// import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+// import { InMemDataService } from "./in-mem-data.service";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -53,11 +53,11 @@ import { ToolboxModule } from "./toolbox/toolbox.module";
     QuitGuideModule,
     ReactiveFormsModule,
     SharedModule,
-    environment.production
-      ? []
-      : HttpClientInMemoryWebApiModule.forRoot(InMemDataService)
+    // environment.production
+    //   ? []
+    //   : HttpClientInMemoryWebApiModule.forRoot(InMemDataService)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
