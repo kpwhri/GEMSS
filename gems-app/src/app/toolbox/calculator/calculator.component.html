@@ -1,27 +1,26 @@
 <h3>Savings Calculator</h3>
 <div id="savings-form">
   <p>Calculate how much money you could save by not smoking:</p>
+ I'm here
+  <form [formGroup]="calculatorForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+          <label for="packs">Packs per day smoked:</label>
+          <input
+            [(ngModel)]="packs"
+            type="number"
+            matInput
+            autofocus
+            placeholder="#"
+          />
+      </mat-form-field>
+
+      <mat-form-field>
+          <label for="cost">Cost per pack:</label>
+          <input [(ngModel)]="cost" type="number" matInput placeholder="$" />
+      </mat-form-field>
+    </form>
+
   <mat-list>
-    <mat-list-item>
-      <div class="form-field">
-        <label for="packs">Packs per day smoked:</label>
-        <input
-          [(ngModel)]="packs"
-          type="number"
-          matInput
-          autofocus
-          placeholder="#"
-        />
-      </div>
-    </mat-list-item>
-
-    <mat-list-item>
-      <div class="form-field">
-        <label for="cost">Cost per pack:</label>
-        <input [(ngModel)]="cost" type="number" matInput placeholder="$" />
-      </div>
-    </mat-list-item>
-
     <mat-list-item>
       <button
         id="calculate"

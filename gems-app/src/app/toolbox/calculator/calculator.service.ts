@@ -1,39 +1,38 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
 import { Observable, throwError } from "rxjs";
 import { tap, catchError, map } from "rxjs/operators";
 
-import { httpOptions, apiUrl } from "../shared/globals";
-import { JournalEntry } from "./journal-entry";
-import { MessageService } from "../message.service";
+import { httpOptions, apiUrl } from "../../shared/globals";
+import { MessageService } from "../../message.service";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
-export class JournalService {
+export class CalculatorService {
+
   constructor(
     private http: HttpClient,
     private messageService: MessageService
   ) { }
 
-
-  getEntries(): Observable<JournalEntry[]> {
+  getCalculations() {
     this.messageService.add("JournalService: fetched entry");
     return this.http
-      .get<JournalEntry[]>(apiUrl + "journal/entries", httpOptions)
+      .get(apiUrl + "journal/entries", httpOptions)
       .pipe(catchError(this.handleError));
   }
 
-  getEntry(entryId): Observable<JournalEntry> {
+  getCalculation(calculationId) {
     return this.http
-      .get<JournalEntry>(apiUrl + "journal/entries/" + entryId, httpOptions)
+      .get(apiUrl + "journal/calculators/" + calculationId, httpOptions)
       .pipe(catchError(this.handleError));
   }
 
-  saveEntry(journalEntry: { title: string, entry: string }) {
+  saveCalculation(calculation: { packs_per_day: number, cost_per_pack: number }) {
     return this.http
-      .post<JournalEntry>(apiUrl + "journal/entries/", journalEntry, httpOptions)
+      .post(apiUrl + "journal/calculators/", calculation, httpOptions)
       .pipe(catchError(this.handleError))
       .subscribe(responseData => {
         // console.log(responseData);

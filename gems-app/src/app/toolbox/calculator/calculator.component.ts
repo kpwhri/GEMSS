@@ -1,4 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
+import { FormGroup, FormControl } from '@angular/forms';
+
+import { CalculatorService } from './calculator.service';
 
 @Component({
   selector: "app-calculator",
@@ -6,13 +9,21 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./calculator.component.scss"]
 })
 export class CalculatorComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
-  packs: number;
+  @Input() entry: JournalEntry;
+
+
+  @Input(): packs: number;
   cost: number;
   weekly: number;
   monthly: number;
   yearly: number;
+
+  calculatorForm = new FormGroup({
+    packs: new FormControl(''),
+    cost: new FormControl(''),
+  });
 
   get_daily_cost(packs: number, cost: number) {
     return packs * cost;
@@ -37,5 +48,5 @@ export class CalculatorComponent implements OnInit {
     this.yearly = this.get_savings(this.packs, this.cost, "year");
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

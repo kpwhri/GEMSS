@@ -41,8 +41,7 @@ export class JournalDetailComponent implements OnInit {
   }
 
   onSubmit(): void {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.journalDetailForm.value);
+    // console.warn(this.journalDetailForm.value);
     this.journalService.saveEntry(this.journalDetailForm.value);
   }
 
