@@ -11,15 +11,15 @@ import { CalculatorService } from './calculator.service';
 export class CalculatorComponent implements OnInit {
   constructor(private calculatorService: CalculatorService) { }
 
-  @Input() packs: number;
-  @Input() cost: number;
+  @Input() packs_per_day: number;
+  @Input() cost_per_pack: number;
   weekly: number;
   monthly: number;
   yearly: number;
 
   calculatorForm = new FormGroup({
-    packs: new FormControl(''),
-    cost: new FormControl(''),
+    packs_per_day: new FormControl(''),
+    cost_per_pack: new FormControl(''),
   });
 
   get_daily_cost(packs: number, cost: number) {
@@ -40,11 +40,12 @@ export class CalculatorComponent implements OnInit {
   }
 
   onSubmit() {
-    this.cost = this.calculatorForm.value.cost;
-    this.packs = this.calculatorForm.value.packs;
-    this.weekly = this.get_savings(this.packs, this.cost, "week");
-    this.monthly = this.get_savings(this.packs, this.cost, "month");
-    this.yearly = this.get_savings(this.packs, this.cost, "year");
+    this.packs_per_day = this.calculatorForm.value.packs_per_day;
+    this.cost_per_pack = this.calculatorForm.value.cost_per_pack;
+    this.weekly = this.get_savings(this.packs_per_day, this.cost_per_pack, "week");
+    this.monthly = this.get_savings(this.packs_per_day, this.cost_per_pack, "month");
+    this.yearly = this.get_savings(this.packs_per_day, this.cost_per_pack, "year");
+    this.calculatorService.saveCalculation(this.calculatorForm.value);
   }
 
   ngOnInit() { }

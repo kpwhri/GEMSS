@@ -3,9 +3,9 @@
   <p>Calculate how much money you could save by not smoking:</p>
   <form [formGroup]="calculatorForm" (ngSubmit)="onSubmit()">
     <mat-form-field>
-        <mat-label for="packs">Packs per day smoked:</mat-label>
+        <mat-label for="packs_per_day">Packs per day smoked:</mat-label>
         <input
-          formControlName='packs'
+          formControlName='packs_per_day'
           matInput
           autofocus
           placeholder="#"
@@ -13,8 +13,8 @@
     </mat-form-field>
 
     <mat-form-field>
-        <mat-label for="cost">Cost per pack:</mat-label>
-        <input formControlName='cost' matInput placeholder="$" />
+        <mat-label for="cost_per_pack">Cost per pack:</mat-label>
+        <input formControlName='cost_per_pack' matInput placeholder="$" />
     </mat-form-field>
   </form>
 

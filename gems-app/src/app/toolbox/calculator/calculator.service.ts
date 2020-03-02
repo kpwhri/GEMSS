@@ -18,24 +18,26 @@ export class CalculatorService {
   ) { }
 
   getCalculations() {
-    this.messageService.add("JournalService: fetched entry");
+    this.messageService.add("CalculatorService: fetched calculations");
     return this.http
-      .get(apiUrl + "journal/entries", httpOptions)
+      .get(apiUrl + "calculator/calculators", httpOptions)
       .pipe(catchError(this.handleError));
   }
 
   getCalculation(calculationId) {
+    this.messageService.add("CalculatorService: fetched calculation");
     return this.http
-      .get(apiUrl + "journal/calculators/" + calculationId, httpOptions)
+      .get(apiUrl + "calculator/calculators/" + calculationId, httpOptions)
       .pipe(catchError(this.handleError));
   }
 
   saveCalculation(calculation: { packs_per_day: number, cost_per_pack: number }) {
+    this.messageService.add("CalculatorService: saved calculation");
     return this.http
-      .post(apiUrl + "journal/calculators/", calculation, httpOptions)
+      .post(apiUrl + "calculator/calculators/", calculation, httpOptions)
       .pipe(catchError(this.handleError))
       .subscribe(responseData => {
-        // console.log(responseData);
+        console.log(responseData);
       });
   }
 
