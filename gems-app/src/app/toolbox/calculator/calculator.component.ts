@@ -9,13 +9,10 @@ import { CalculatorService } from './calculator.service';
   styleUrls: ["./calculator.component.scss"]
 })
 export class CalculatorComponent implements OnInit {
-  constructor() { }
+  constructor(private calculatorService: CalculatorService) { }
 
-  @Input() entry: JournalEntry;
-
-
-  @Input(): packs: number;
-  cost: number;
+  @Input() packs: number;
+  @Input() cost: number;
   weekly: number;
   monthly: number;
   yearly: number;
@@ -43,6 +40,8 @@ export class CalculatorComponent implements OnInit {
   }
 
   onSubmit() {
+    this.cost = this.calculatorForm.value.cost;
+    this.packs = this.calculatorForm.value.packs;
     this.weekly = this.get_savings(this.packs, this.cost, "week");
     this.monthly = this.get_savings(this.packs, this.cost, "month");
     this.yearly = this.get_savings(this.packs, this.cost, "year");

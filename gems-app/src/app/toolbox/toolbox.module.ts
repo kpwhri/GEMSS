@@ -1,9 +1,11 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatGridListModule } from "@angular/material/grid-list";
+import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from "@angular/material/list";
 
 import { ToolboxRoutingModule } from "./toolbox-routing.module";
@@ -25,11 +27,13 @@ import { MatExpansionModule } from "@angular/material/expansion";
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     MatExpansionModule,
     MatFormFieldModule,
     MatGridListModule,
+    MatInputModule,
     MatListModule,
     ToolboxRoutingModule
   ]
 })
-export class ToolboxModule {}
+export class ToolboxModule { }
