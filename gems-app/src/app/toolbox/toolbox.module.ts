@@ -3,10 +3,13 @@ import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatExpansionModule } from "@angular/material/expansion";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from "@angular/material/list";
+import { MatNativeDateModule } from "@angular/material/core";
 
 import { ToolboxRoutingModule } from "./toolbox-routing.module";
 import { ToolboxComponent } from "./toolbox.component";
@@ -14,7 +17,6 @@ import { CalculatorComponent } from "./calculator/calculator.component";
 import { LearnOthersComponent } from "./learn-others/learn-others.component";
 import { TalkBackComponent } from "./talk-back/talk-back.component";
 import { TrackerComponent } from "./tracker/tracker.component";
-import { MatExpansionModule } from "@angular/material/expansion";
 
 @NgModule({
   declarations: [
@@ -28,11 +30,13 @@ import { MatExpansionModule } from "@angular/material/expansion";
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    MatDatepickerModule,
     MatExpansionModule,
     MatFormFieldModule,
     MatGridListModule,
     MatInputModule,
     MatListModule,
+    MatNativeDateModule,
     ToolboxRoutingModule
   ]
 })

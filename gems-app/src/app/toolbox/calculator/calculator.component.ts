@@ -11,8 +11,8 @@ import { CalculatorService } from './calculator.service';
 export class CalculatorComponent implements OnInit {
   constructor(private calculatorService: CalculatorService) { }
 
-  @Input() packs_per_day: number;
-  @Input() cost_per_pack: number;
+  packs_per_day: number;
+  cost_per_pack: number;
   weekly: number;
   monthly: number;
   yearly: number;

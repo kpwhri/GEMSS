@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+
+import { TrackerService } from './tracker.service';
 
 @Component({
   selector: 'app-tracker',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrackerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private trackerService: TrackerService) { }
+
+  cigs_num: number;
+  track_dt: Date;
+
+  trackerForm = new FormGroup({
+    cigs_num: new FormControl(''),
+    track_dt: new FormControl(''),
+  });
+
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+
   }
 
 }
