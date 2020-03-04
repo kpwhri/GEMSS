@@ -25,7 +25,8 @@ export class TrackerComponent implements OnInit {
   }
 
   onSubmit() {
-
+    console.count("onSubmit component");
+    this.trackerService.saveTracker(this.trackerForm.value);
   }
 
 }

@@ -33,16 +33,21 @@ export class TrackerService {
 
   saveTracker(tracker: { cigs_num: number, track_dt: Date }) {
     this.messageService.add("TrackerService: saved tracker");
+    const newTracker = {
+      cigs_num: tracker.cigs_num,
+      track_dt: tracker.track_dt.toISOString().slice(0, 10)
+    };
     return this.http
-      .post(apiUrl + "tracker/trackers/", tracker, httpOptions)
+      .post(apiUrl + "tracker/trackers/", newTracker, httpOptions)
       .pipe(catchError(this.handleError))
       .subscribe(responseData => {
+        console.count('saveTracker service');
         console.log(responseData);
       });
   }
 
   private handleError(error: any) {
-    // In a real world app, we might send the error to remote logging infrastructure
+    // Later send the error to remote logging infrastructure
     // and reformat for user consumption
     console.error(error); // log to console instead
     return throwError(error);

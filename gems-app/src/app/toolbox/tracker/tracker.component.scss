@@ -1,0 +1,14 @@
+@import "../../app.component.scss";
+
+button#track {
+  background-color: $dark-blue;
+  border-radius: 4px;
+  color: white;
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}

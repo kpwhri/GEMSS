@@ -12,10 +12,9 @@
 <form [formGroup]="trackerForm" (ngSubmit)="onSubmit()">
   <mat-form-field>
     <mat-label>Choose a date</mat-label>
-    <!-- input formControlName='track_dt' matInput autofocus / -->
-    <input matInput [matDatepicker]='picker' />
+    <input matInput [matDatepicker]='picker' formControlName='track_dt' />
     <mat-datepicker-toggle matSuffix [for]='picker'></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
+    <mat-datepicker touchUi #picker></mat-datepicker>
   </mat-form-field>
 
   <mat-form-field>
@@ -26,7 +25,7 @@
   <p class='tracker-centered'>Enter &ldquo;1&rdquo; if you smoked only a puff.</p>
   <p class='tracker-centered'>Do not include electronic cigarettes (e-cigs)</p>
 
-  <button id="track" raised-button class="full-width-field" (click)="onSubmit()">
+  <button id="track" raised-button class="full-width-field">
     Save
   </button>
 
