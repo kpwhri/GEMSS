@@ -11,6 +11,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from "@angular/material/list";
 import { MatNativeDateModule } from "@angular/material/core";
 
+import { ChartsModule } from 'ng2-charts';
+
 import { ToolboxRoutingModule } from "./toolbox-routing.module";
 import { ToolboxComponent } from "./toolbox.component";
 import { CalculatorComponent } from "./calculator/calculator.component";
@@ -30,6 +32,7 @@ import { TrackerComponent } from "./tracker/tracker.component";
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    ChartsModule,
     MatDatepickerModule,
     MatExpansionModule,
     MatFormFieldModule,

@@ -17,6 +17,13 @@ export class TrackerService {
     private messageService: MessageService
   ) { }
 
+  getGraphData() {
+    this.messageService.add("TrackerService: pulling Tracker data");
+    const trackerData = this.http
+      .get(apiUrl + "tracker/trackers", httpOptions)
+      .pipe(catchError(this.handleError));
+  }
+
   getTrackers() {
     this.messageService.add("TrackerService: fetched trackers");
     return this.http

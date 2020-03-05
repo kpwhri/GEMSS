@@ -1,8 +1,14 @@
 <h3>Cigarette Tracker</h3>
 <hr />
 
-<div>
-  Graph of cigarette tracker
+<div style="display: block;">
+  <canvas baseChart width="100%" height="25%"
+    [datasets]='graphData'
+    [labels]='graphLabels'
+    [options]='graphOptions'
+    [legend]='graphLegend'
+    [chartType]='graphChartType'>
+  </canvas>
 </div>
 
 <hr />
