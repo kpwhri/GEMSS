@@ -35,10 +35,25 @@ export class TrackerComponent implements OnInit {
   ];
 
   ngOnInit() {
+    this.getGraphData();
+  }
+
+  processGraphData(data) {
+    return data;
+  }
+
+  getGraphData() {
+    this.trackerService.getGraphData().subscribe(
+      data => {
+        const cleanData = this.processGraphData(data);
+        console.log("getGraphData");
+        console.log(cleanData);
+        // this.graphData = entry;
+      }
+    );
   }
 
   onSubmit() {
-    console.count("onSubmit component");
     this.trackerService.saveTracker(this.trackerForm.value);
   }
 

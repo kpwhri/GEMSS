@@ -18,9 +18,9 @@ export class TrackerService {
   ) { }
 
   getGraphData() {
-    this.messageService.add("TrackerService: pulling Tracker data");
-    const trackerData = this.http
-      .get(apiUrl + "tracker/trackers", httpOptions)
+    this.messageService.add("TrackerService: pulling Tracker graph data");
+    return this.http
+      .get(apiUrl + "tracker/graph", httpOptions)
       .pipe(catchError(this.handleError));
   }
 
@@ -48,8 +48,7 @@ export class TrackerService {
       .post(apiUrl + "tracker/trackers/", newTracker, httpOptions)
       .pipe(catchError(this.handleError))
       .subscribe(responseData => {
-        console.count('saveTracker service');
-        console.log(responseData);
+        // console.log(responseData);
       });
   }
 
