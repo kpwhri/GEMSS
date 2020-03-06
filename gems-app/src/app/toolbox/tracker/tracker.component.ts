@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
+import { Color, BaseChartDirective, Label } from 'ng2-charts';
+
 import { TrackerService } from './tracker.service';
+import { ChartDataSets } from 'chart.js';
 
 @Component({
   selector: 'app-tracker',
@@ -22,35 +25,79 @@ export class TrackerComponent implements OnInit {
 
   public graphOptions = {
     scaleShowVerticalLines: false,
-    responsive: true
+    responsive: true,
+    elements: {
+      line: {
+        tension: 0
+      }
+    },
+    scales: {
+      yAxes: [{
+        scaleLabel: {
+          display: true,
+          labelString: '# of cigarettes smoked',
+          fontColor: '#0078b3'
+        },
+        ticks: {
+          precision: 0
+        }
+      }],
+      xAxes: [{
+        scaleLabel: {
+          display: true,
+          labelString: 'date',
+          fontColor: '#0078b3'
+        }
+      }]
+    }
   }
 
-  public graphLabels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-  public graphChartType = 'bar';
-  public graphLegend = true;
+  public graphChartType = 'line';
+  public graphLegend = false;
 
-  public graphData = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
+  public graphChartColors: Color[] = [{
+    borderColor: '#003b71',
+    pointBackgroundColor: '#003b71',
+    pointRadius: 4
+  }];
+
+  public graphLabels: Label[] = [];
+  public graphData: ChartDataSets[] = [
+    { data: [], label: 'cigarette tracker', fill: false }
   ];
 
   ngOnInit() {
     this.getGraphData();
   }
 
-  processGraphData(data) {
-    return data;
-  }
-
   getGraphData() {
     this.trackerService.getGraphData().subscribe(
       data => {
-        const cleanData = this.processGraphData(data);
-        console.log("getGraphData");
-        console.log(cleanData);
-        // this.graphData = entry;
+        const cleanData = this.processGraphData(data, 7);
       }
     );
+  }
+
+  processGraphData(data, days) {
+    // WHAT IF someone adds multiple trackings on the same day???
+    // RETURN max, either with group_by (prefered) or order DESC
+    const startDate = new Date();
+    const endDate = new Date();
+    startDate.setDate(endDate.getDate() - days + 1);
+    let dataArray = new Array(days).fill(0);
+    let i = 0;
+    for (let d = startDate; d <= endDate; d.setDate(d.getDate() + 1)) {
+      this.graphLabels.push(d.getDate().toString());
+      let graphDate = d.toISOString().slice(0, 10);
+      for (let tracker of data) {
+        if (tracker.track_dt === graphDate) {
+          dataArray[i] = tracker.cigs_num;
+        }
+      }
+      i++;
+    }
+    this.graphData = [{ data: dataArray, label: 'cigarette tracker', fill: false }]
+    return data;
   }
 
   onSubmit() {
