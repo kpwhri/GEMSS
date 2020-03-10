@@ -6,7 +6,6 @@ import { HttpClientModule } from "@angular/common/http";
 
 // import { environment } from "../environments/environment";
 
-// import { MatExpansionModule } from "@angular/material/expansion";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatInputModule } from "@angular/material/input";
@@ -19,19 +18,18 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-// import { GemTopViewComponent } from "./gem-top-view/gem-top-view.component";
+
 import { MessagesComponent } from "./messages/messages.component";
 import { JournalModule } from "./journal/journal.module";
 import { NavigationComponent } from "./navigation/navigation.component";
 import { QuitGuideModule } from "./quit-guide/quit-guide.module";
 import { SharedModule } from "./shared/shared.module";
 import { ToolboxModule } from "./toolbox/toolbox.module";
-// import { MatExpansionModule } from "@angular/material/expansion";
+import { GemCollectionModule } from './gem-collection/gem-collection.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    // GemTopViewComponent,
     NavigationComponent,
     MessagesComponent
   ],
@@ -40,9 +38,9 @@ import { ToolboxModule } from "./toolbox/toolbox.module";
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    GemCollectionModule,
     HttpClientModule,
     JournalModule,
-    // MatExpansionModule,
     MatFormFieldModule,
     MatGridListModule,
     MatInputModule,
@@ -52,6 +50,7 @@ import { ToolboxModule } from "./toolbox/toolbox.module";
     QuitGuideModule,
     ReactiveFormsModule,
     SharedModule,
+    ToolboxModule
     // environment.production
     //   ? []
     //   : HttpClientInMemoryWebApiModule.forRoot(InMemDataService)
