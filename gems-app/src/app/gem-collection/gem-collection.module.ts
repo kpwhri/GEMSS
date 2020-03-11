@@ -3,16 +3,21 @@ import { CommonModule } from '@angular/common';
 import { MatGridListModule } from '@angular/material/grid-list';
 
 import { GemCollectionComponent } from './gem-collection.component';
+import { GemTopViewComponent } from './gem-top-view/gem-top-view.component';
 
 
 @NgModule({
-  declarations: [GemCollectionComponent],
+  declarations: [
+    GemCollectionComponent,
+    GemTopViewComponent
+  ],
   imports: [
     CommonModule,
     MatGridListModule
   ],
   exports: [
-    GemCollectionComponent
+    GemCollectionComponent,
+    GemTopViewComponent
   ]
 })
 export class GemCollectionModule { }

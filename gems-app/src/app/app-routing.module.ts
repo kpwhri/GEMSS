@@ -1,8 +1,10 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { JournalListComponent } from "./journal/journal-list/journal-list.component";
+// import { JournalListComponent } from "./journal/journal-list/journal-list.component";
+import { GemCollectionComponent } from "./gem-collection/gem-collection.component";
 
 const routes: Routes = [
+  { path: 'gem-collection', component: GemCollectionComponent },
   {
     path: "journal",
     loadChildren: () =>
@@ -29,4 +31,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

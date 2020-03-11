@@ -5,7 +5,7 @@ import { MatDialogModule } from "@angular/material/dialog";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatGridListModule } from "@angular/material/grid-list";
 
-import { GemTopViewComponent } from "../gem-top-view/gem-top-view.component";
+import { GemCollectionModule } from "../gem-collection/gem-collection.module";
 import { QuitGuideComponent } from "./quit-guide.component";
 import { SteponeComponent } from "./steps/stepone.component";
 import { SteponeAComponent } from "./steps/stepone-a.component";
@@ -52,11 +52,12 @@ import { QuitGuideRoutingModule } from "./quit-guide-routing.module";
     MatDialogModule,
     MatExpansionModule,
     MatGridListModule,
+    GemCollectionModule,
     QuitGuideRoutingModule
   ],
   declarations: [
     QuitGuideComponent,
-    GemTopViewComponent,
+    // GemTopViewComponent,
     SteponeComponent,
     SteponeAComponent,
     SteponeBComponent,
@@ -98,7 +99,7 @@ import { QuitGuideRoutingModule } from "./quit-guide-routing.module";
     MatCardModule,
     MatExpansionModule,
     QuitGuideComponent,
-    GemTopViewComponent,
+    GemCollectionModule,
     SteponeComponent,
     SteponeAComponent,
     SteponeBComponent,
@@ -139,4 +140,4 @@ import { QuitGuideRoutingModule } from "./quit-guide-routing.module";
     StepfourDDialog9Component
   ]
 })
-export class QuitGuideModule {}
+export class QuitGuideModule { }
