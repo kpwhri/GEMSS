@@ -1,53 +1,63 @@
 /**
-  Creates a top view of a diamond that requires 3 arguments:
-    colorTop: first color
-    colorBottom: second color
-    gemId: unique identifier for specific gem -
-      required to ensure colors map to proper gem
-**/
+ *  Creates a top view of a diamond that requires 2 arguments:
+ *  gemType: Name of the desired gem (associated with predefined colors)
+ *  gemSize: Typical small or Gem Collection large
+ *
+ *  Original design has both top-view & side-view gems - to be done
+ */
 
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-gem-top-view',
-  template: `
-  <div>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-      width="22.05" height="24.625" viewBox="0 0 22.05 24.625">
-      <defs>
-        <style>.gem-{{ gemId }}{fill:url(#gem-{{ gemId }});}</style>
-        <radialGradient id="gem-{{ gemId }}" cx="0.5" cy="0.5" r="0.5"
-           gradientUnits="objectBoundingBox">
-          <stop offset="0" attr.stop-color="{{ colorTop }}"/>
-          <stop offset="1" attr.stop-color="{{ colorBottom }}"/>
-        </radialGradient>
-      </defs>
-      <path attr.class="gem-{{ gemId }}" d="M18.284,7.654l5.939-3.429V0l-9.6,5.541Zm0,0"
-        transform="translate(-13.922 0)"/>
-      <path attr.class="gem-{{ gemId }}" d="M3.639,150.477V143.62L0,141.519v11.059Zm0,0"
-        transform="translate(0 -134.713)"/>
-      <path attr.class="gem-{{ gemId }}" d="M117.634,117.343l-5.939-3.429-5.938,3.429V124.2l5.938,3.429,5.939-3.429Zm0,0"
-        transform="translate(-100.671 -108.435)"/>
-      <path attr.class="gem-{{ gemId }}" d="M244.277,0V4.225l5.938,3.429,3.659-2.113Zm0,0"
-        transform="translate(-232.528)"/>
-      <path attr.class="gem-{{ gemId }}" d="M382.8,143.62v6.857l3.639,2.1V141.519Zm0,0"
-        transform="translate(-364.386 -134.712)"/>
-      <path attr.class="gem-{{ gemId }}" d="M25.03,357.268l-5.939-3.428-3.618,2.089,9.557,5.518Zm0,0"
-        transform="translate(-14.728 -336.822)"/>
-      <path attr.class="gem-{{ gemId }}" d="M250.215,353.84l-5.938,3.428v4.178l9.557-5.518Zm0,0"
-        transform="translate(-232.528 -336.822)"/>
-    </svg>
-  </div>
-  `
+  templateUrl: './gem-top-view.component.html',
+  styleUrls: ['./gem-top-view.component.scss']
 })
 export class GemTopViewComponent implements OnInit {
-  @Input() colorTop: string;
-  @Input() colorBottom: string;
-  @Input() gemId: string;
+  @Input() gemType: string;
+  @Input() gemSize: string;
+
+  colorTop: string;
+  colorBottom: string;
+
+  define_gem_characteristics(gemType: string) {
+    if (this.gemType === 'novice') {
+      this.colorTop = "#57a635";
+      this.colorBottom = "#2c531b";
+    } else if (this.gemType === 'explorer') {
+      this.colorTop = "#20a29e";
+      this.colorBottom = "#10514f";
+    } else if (this.gemType === 'adventurer') {
+      this.colorTop = "#f05674";
+      this.colorBottom = "#782b3a";
+    } else if (this.gemType === 'champion') {
+      this.colorTop = "#583985";
+      this.colorBottom = "#2c1d43";
+    } else if (this.gemType === 'star') {
+      this.colorTop = "#92ccf0";
+      this.colorBottom = "#496678";
+    } else if (this.gemType === 'master') {
+      this.colorTop = "#0078b3";
+      this.colorBottom = "#003c5a";
+    } else if (this.gemType === 'tracker') {
+      this.colorTop = "#F36C0D";
+      this.colorBottom = "#003c5a";
+    } else if (this.gemType === 'savvy-saver') {
+      this.colorTop = "#A4D751";
+      this.colorBottom = "#7FA149";
+    } else if (this.gemType === 'excuse-expert') {
+      this.colorTop = "#B2A8D2";
+      this.colorBottom = "#595469";
+    } else if (this.gemType === 'motivational-mentee') {
+      this.colorTop = "#FEC941";
+      this.colorBottom = "#7F6521";
+    }
+  }
 
   constructor() { }
 
   ngOnInit() {
+    this.define_gem_characteristics(this.gemType);
   }
 
 }

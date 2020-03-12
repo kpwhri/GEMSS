@@ -14,7 +14,7 @@
       of the basics to help plan for your future &hellip;
     </mat-card-content>
   </mat-card-subtitle>
-  <app-gem-top-view colorTop="#57a635" colorBottom="#2c531b" gemId="1">
+  <app-gem-top-view gemType='novice'>
   </app-gem-top-view>
 </mat-card>
 
@@ -34,7 +34,7 @@
       stop-smoking medicine for you! Learn more &hellip;
     </mat-card-content>
   </mat-card-subtitle>
-  <app-gem-top-view colorTop="#20a29e" colorBottom="#10514f" gemId="2">
+  <app-gem-top-view gemType="explorer">
   </app-gem-top-view>
 </mat-card>
 
@@ -54,7 +54,7 @@
       will give you time to get prepared &hellip;
     </mat-card-content>
   </mat-card-subtitle>
-  <app-gem-top-view colorTop="#f05674" colorBottom="#782b3a" gemId="3">
+  <app-gem-top-view gemType="adventurer">
   </app-gem-top-view>
 </mat-card>
 
@@ -74,7 +74,7 @@
       how to prepare yourself &hellip;
     </mat-card-content>
   </mat-card-subtitle>
-  <app-gem-top-view colorTop="x" colorBottom="y" gemId="2"> </app-gem-top-view>
+  <app-gem-top-view gemType="champion"> </app-gem-top-view>
 </mat-card>
 
 <mat-card class="quit-card" routerLink="/quit-guide/step/5">
@@ -93,9 +93,7 @@
       Quit Date &hellip;
     </mat-card-content>
   </mat-card-subtitle>
-  <div>
-    <b>&#8942;</b>
-  </div>
+  <app-gem-top-view gemType="star"> </app-gem-top-view>
 </mat-card>
 
 <mat-card class="quit-card" routerLink="/quit-guide/step/6">
@@ -114,5 +112,5 @@
       failed. Learn how to turn your slip into a step toward success &hellip;
     </mat-card-content>
   </mat-card-subtitle>
-  <div>hex</div>
+  <app-gem-top-view gemType="master"> </app-gem-top-view>
 </mat-card>

@@ -1,0 +1,21 @@
+.gem-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    width: 100px;
+}
+
+.gem-small {
+  height: 25px;
+  width: 25px;
+}
+
+.gem-large {
+  height: 50px;
+  width: 50px;
+}
