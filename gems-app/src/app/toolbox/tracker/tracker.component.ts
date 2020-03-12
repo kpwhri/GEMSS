@@ -74,6 +74,9 @@ export class TrackerComponent implements OnInit {
     this.trackerService.getGraphData().subscribe(
       data => {
         const cleanData = this.processGraphData(data, 7);
+        // console.log("In getGraphData()");
+        // console.log(cleanData);
+        return cleanData;
       }
     );
   }
@@ -86,11 +89,15 @@ export class TrackerComponent implements OnInit {
     startDate.setDate(endDate.getDate() - days + 1);
     let dataArray = new Array(days).fill(0);
     let i = 0;
+    console.log("processGraphData - one at aa time");
     for (let d = startDate; d <= endDate; d.setDate(d.getDate() + 1)) {
       this.graphLabels.push(d.getDate().toString());
       let graphDate = d.toISOString().slice(0, 10);
       for (let tracker of data) {
         if (tracker.track_dt === graphDate) {
+          console.log("graphDate: " + graphDate.toString());
+          console.log("tracker.track_dt: " + tracker.track_dt.toString());
+          console.log("tracker.cigs_num: " + tracker.cigs_num.toString());
           dataArray[i] = tracker.cigs_num;
         }
       }

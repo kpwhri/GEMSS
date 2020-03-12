@@ -51,5 +51,5 @@ class GraphList(generics.ListAPIView):
         days_past = self.request.query_params.get('days_past', 7)
         cutoff_date = datetime.date.today() - datetime.timedelta(days=int(days_past))
         queryset = queryset.filter(track_dt__gte=cutoff_date).only(
-            'cigs_num', 'track_dt').order_by('track_dt')
+            'cigs_num', 'track_dt').order_by('track_dt', 'cigs_num')
         return queryset

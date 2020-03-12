@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { Router } from "@angular/router";
 
 import { Observable, throwError } from "rxjs";
 import { tap, catchError, map } from "rxjs/operators";
@@ -14,11 +15,14 @@ export class TrackerService {
 
   constructor(
     private http: HttpClient,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private router: Router
   ) { }
 
   getGraphData() {
     this.messageService.add("TrackerService: pulling Tracker graph data");
+    console.log("From getGraphData");
+    console.log(this.http.get(apiUrl + "tracker/graph", httpOptions));
     return this.http
       .get(apiUrl + "tracker/graph", httpOptions)
       .pipe(catchError(this.handleError));
@@ -48,7 +52,8 @@ export class TrackerService {
       .post(apiUrl + "tracker/trackers/", newTracker, httpOptions)
       .pipe(catchError(this.handleError))
       .subscribe(responseData => {
-        // console.log(responseData);
+        console.log(responseData);
+        this.router.navigate(['/tracker'])
       });
   }
 

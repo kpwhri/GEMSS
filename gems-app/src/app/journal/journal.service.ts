@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { Router } from "@angular/router";
 
 import { Observable, throwError } from "rxjs";
 import { tap, catchError, map } from "rxjs/operators";
@@ -14,6 +15,7 @@ import { MessageService } from "../message.service";
 export class JournalService {
   constructor(
     private http: HttpClient,
+    private router: Router,
     private messageService: MessageService
   ) { }
 
@@ -36,7 +38,7 @@ export class JournalService {
       .post<JournalEntry>(apiUrl + "journal/entries/", journalEntry, httpOptions)
       .pipe(catchError(this.handleError))
       .subscribe(responseData => {
-        // console.log(responseData);
+        this.router.navigate(['/journal/list']);
       });
   }
 
