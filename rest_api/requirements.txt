@@ -24,7 +24,7 @@ pycodestyle==2.5.0
 pyflakes==2.1.1
 Pygments==2.7.4
 pytz==2018.9
-PyYAML==3.13
+PyYAML==5.4
 requests==2.22.0
 six==1.12.0
 sqlparse==0.3.0
